@@ -25,19 +25,6 @@ class ViewController: UIViewController {
         case pants
         case shirt
     }
-    
-    struct outfit {
-        let shoes: String
-        let pants: String
-        let shirt: String
-        
-        init(shoes: String, pants: String, shirt: String) {
-            self.shoes = shoes
-            self.pants = pants
-            self.shirt = shirt
-        }
-    }
-    
 
     
 

@@ -25,6 +25,48 @@ class ViewController: UIViewController {
         case pants
         case shirt
     }
+    
+    func createItem () {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let formalTagText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
+        let weatherTagText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
+        let categoryText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
+        
+        let pngImageData = UIImagePNGRepresentation(imageView)
+        let result = write(toFile: pngImageData!)
+        
+        let newItem = Item(category: categoryText, formalTag: formalTagText, photo: result, weatherTag: weatherTagText)
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+    
+    }
+    
+    func updateItem (updateItem: Item) -> Item {
+        
+        let formalTagText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
+        let weatherTagText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
+        let categoryText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
+        
+        let pngImageData = UIImagePNGRepresentation(imageView)
+        let result = write(toFile: pngImageData!)
+        
+        updateItem = Item(category: categoryText, formalTag: formalTagText, photo: result, weatherTag: weatherTagText)
+        
+        return updateItem
+        
+    }
+    
+    func deleteItem (deleteItem: Item) {
+        let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        managedContext.delete(deleteItem)
+    }
 
     
 

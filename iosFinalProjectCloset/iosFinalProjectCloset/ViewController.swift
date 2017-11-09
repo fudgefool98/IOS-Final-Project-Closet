@@ -88,6 +88,9 @@ class ViewController: UIViewController {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let managedContext = appDelegate.persistentContainer.viewContext
+
+        
+        //below code is no longer needed because we are not comparing optionals anymore
         
 //        if (shoeItem.category == nil || shirtItem.category == nil || pantItem.category == nil) {
 //            print("Can't create outfit. Item is empty")

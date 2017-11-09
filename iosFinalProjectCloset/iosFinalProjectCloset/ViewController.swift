@@ -113,7 +113,13 @@ class ViewController: UIViewController {
         managedContext.delete(deleteOutfit)
     }
 
-    
+    func printItem (printItem: Item) {
+        segment.selectedSegmentIndex = Int(printItem.formalTag)
+        segmented.selectedSegmentIndex = Int(printItem.weatherTag)
+        segment.selectedSegmentIndex = Int(printItem.category)
+        
+        UIImage.image = printItem.photo
+    }
 
 }
 

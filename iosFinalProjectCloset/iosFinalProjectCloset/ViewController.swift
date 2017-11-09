@@ -36,9 +36,9 @@ class ViewController: UIViewController {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let formalTagText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
-        let weatherTagText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
-        let categoryText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
+        let formalTagText = segment.selectedSegmentIndex
+        let weatherTagText = segment.selectedSegmentIndex
+        let categoryText = segment.selectedSegmentIndex
         
         let pngImageData = UIImagePNGRepresentation(imageView.image)
         let result = write(toFile: pngImageData!)
@@ -65,9 +65,9 @@ class ViewController: UIViewController {
     
     func updateItem (updateItem: Item) -> Item {
         
-        let formalTagText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
-        let weatherTagText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
-        let categoryText = segment.titleForSegmentAtIndex(segment.selectedSegmentIndex)
+        let formalTagText = segment.selectedSegmentIndex
+        let weatherTagText = segment.selectedSegmentIndex
+        let categoryText = segment.selectedSegmentIndex
         
         let pngImageData = UIImagePNGRepresentation(imageView.image)
         let result = write(toFile: pngImageData!)

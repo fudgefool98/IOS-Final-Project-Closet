@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  iosFinalProjectCloset
 //
-//  Created by Mandy Rogers on 10/31/17.
+//  Created by Tiara Jarrett on 11/9/17.
 //  Copyright © 2017 Mandy Rogers. All rights reserved.
 //
 //
@@ -17,9 +17,9 @@ extension Item {
         return NSFetchRequest<Item>(entityName: "Item")
     }
 
-    @NSManaged public var category: String?
-    @NSManaged public var formalTag: String?
-    @NSManaged public var photo: String?
-    @NSManaged public var weatherTag: String?
+    @NSManaged public var category: Int64
+    @NSManaged public var formalTag: Int64
+    @NSManaged public var photo: Int64
+    @NSManaged public var weatherTag: Int64
 
 }

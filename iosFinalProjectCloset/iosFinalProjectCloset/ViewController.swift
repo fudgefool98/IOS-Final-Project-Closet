@@ -36,9 +36,9 @@ class ViewController: UIViewController {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        let formalTagText = segment.selectedSegmentIndex
-        let weatherTagText = segment.selectedSegmentIndex
-        let categoryText = segment.selectedSegmentIndex
+        let formalTagText = formalSegment.selectedSegmentIndex
+        let weatherTagText = weatherSegment.selectedSegmentIndex
+        let categoryText = catergorySegment.selectedSegmentIndex
         
         let pngImageData = UIImagePNGRepresentation(imageView.image)
         let result = write(toFile: pngImageData!)
@@ -65,9 +65,9 @@ class ViewController: UIViewController {
     
     func updateItem (updateItem: Item) -> Item {
         
-        let formalTagText = segment.selectedSegmentIndex
-        let weatherTagText = segment.selectedSegmentIndex
-        let categoryText = segment.selectedSegmentIndex
+        let formalTagText = formalSegment.selectedSegmentIndex
+        let weatherTagText = weatherSegment.selectedSegmentIndex
+        let categoryText = categorySegment.selectedSegmentIndex
         
         let pngImageData = UIImagePNGRepresentation(imageView.image)
         let result = write(toFile: pngImageData!)
@@ -89,10 +89,10 @@ class ViewController: UIViewController {
         
         let managedContext = appDelegate.persistentContainer.viewContext
         
-        if (shoeItem.category == nil || shirtItem.category == nil || pantItem.category == nil) {
-            print("Can't create outfit. Item is empty")
-            return
-        }
+//        if (shoeItem.category == nil || shirtItem.category == nil || pantItem.category == nil) {
+//            print("Can't create outfit. Item is empty")
+//            return
+//        }
         
         let newOutfit = Outfit(shoes: shoeItem, shirt: shirtItem, pants: pantItem)
         
@@ -114,9 +114,9 @@ class ViewController: UIViewController {
     }
 
     func printItem (printItem: Item) {
-        segment.selectedSegmentIndex = Int(printItem.formalTag)
-        segmented.selectedSegmentIndex = Int(printItem.weatherTag)
-        segment.selectedSegmentIndex = Int(printItem.category)
+        formalSegment.selectedSegmentIndex = Int(printItem.formalTag)
+        weatherSegmented.selectedSegmentIndex = Int(printItem.weatherTag)
+        catergorySegment.selectedSegmentIndex = Int(printItem.category)
         
         UIImage.image = printItem.photo
     }

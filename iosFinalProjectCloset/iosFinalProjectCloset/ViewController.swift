@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let shirtsArray = [Item]()
-    let pantsArray = [Item]()
-    let shoesArray = [Item]()
+    var shirtsArray = [Item]()
+    var pantsArray = [Item]()
+    var shoesArray = [Item]()
     var outfitsArray = [Outfit]()
     
     override func viewDidLoad() {
@@ -49,11 +49,11 @@ class ViewController: UIViewController {
             try managedContext.save()
             
             switch categoryText {
-                case "Shirt":
+                case 0:
                     return shirtsArray.insert(newItem, at: 0)
-                case "Shoes":
+                case 1:
                     return shoesArray.insert(newItem, at: 0)
-                case "Pants":
+                case 2:
                     return pantsArray.insert(newItem, at: 0)
             }
             
@@ -79,6 +79,17 @@ class ViewController: UIViewController {
     }
     
     func deleteItem (deleteItem: Item) {
+        switch deleteItem.category {
+        case 0:
+            return shirtsArray = shirtsArray.filter() { $0 != deleteItem }
+        case 1:
+            return shoesArray = shoesArray.filter() { $0 != deleteItem }
+        case 2:
+            return pantsArray = pantsArray.filter() { $0 != deleteItem }
+        default:
+            print ("Error deleting Item from array")
+            return
+        }
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         managedContext.delete(deleteItem)
     }
@@ -89,14 +100,6 @@ class ViewController: UIViewController {
         
         let managedContext = appDelegate.persistentContainer.viewContext
 
-        
-        //below code is no longer needed because we are not comparing optionals anymore
-        
-//        if (shoeItem.category == nil || shirtItem.category == nil || pantItem.category == nil) {
-//            print("Can't create outfit. Item is empty")
-//            return
-//        }
-        
         let newOutfit = Outfit(shoes: shoeItem, shirt: shirtItem, pants: pantItem)
         
         do {
@@ -112,6 +115,9 @@ class ViewController: UIViewController {
     }
     
     func deleteOutfit (deleteOutfit: Outfit) {
+        
+        outfitsArray = outfitsArray.filter() { $0 != deleteOutfit }
+        
         let managedContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         managedContext.delete(deleteOutfit)
     }

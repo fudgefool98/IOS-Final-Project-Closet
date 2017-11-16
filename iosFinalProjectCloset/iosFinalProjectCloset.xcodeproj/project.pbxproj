@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51D359F81FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D359F71FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift */; };
 		9D73D75B1FA66FC7006C8353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D75A1FA66FC7006C8353 /* AppDelegate.swift */; };
 		9D73D75D1FA66FC7006C8353 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D75C1FA66FC7006C8353 /* ViewController.swift */; };
 		9D73D7601FA66FC7006C8353 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D73D75E1FA66FC7006C8353 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51D359F71FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteConfirmationViewController.swift; sourceTree = "<group>"; };
 		9D73D7571FA66FC7006C8353 /* iosFinalProjectCloset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosFinalProjectCloset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D73D75A1FA66FC7006C8353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D73D75C1FA66FC7006C8353 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				9D73D7661FA66FC7006C8353 /* LaunchScreen.storyboard */,
 				9D73D7691FA66FC7006C8353 /* Info.plist */,
 				9D73D7611FA66FC7006C8353 /* iosFinalProjectCloset.xcdatamodeld */,
+				51D359F71FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift */,
 			);
 			path = iosFinalProjectCloset;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				9DF79A8B1FA8FD1400DEA7DB /* Outfit+CoreDataProperties.swift in Sources */,
 				9D73D7631FA66FC7006C8353 /* iosFinalProjectCloset.xcdatamodeld in Sources */,
 				9D73D75D1FA66FC7006C8353 /* ViewController.swift in Sources */,
+				51D359F81FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift in Sources */,
 				9DF79A861FA8FC6D00DEA7DB /* Item+CoreDataClass.swift in Sources */,
 				9D73D75B1FA66FC7006C8353 /* AppDelegate.swift in Sources */,
 				9DF79A8A1FA8FD1400DEA7DB /* Outfit+CoreDataClass.swift in Sources */,

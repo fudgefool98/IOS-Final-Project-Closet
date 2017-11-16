@@ -121,6 +121,7 @@
 				9D73D7661FA66FC7006C8353 /* LaunchScreen.storyboard */,
 				9D73D7691FA66FC7006C8353 /* Info.plist */,
 				9D73D7611FA66FC7006C8353 /* iosFinalProjectCloset.xcdatamodeld */,
+				51D359F71FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift */,
 			);
 			path = iosFinalProjectCloset;
 			sourceTree = "<group>";
@@ -280,6 +281,7 @@
 				9DF79A8B1FA8FD1400DEA7DB /* Outfit+CoreDataProperties.swift in Sources */,
 				9D73D7631FA66FC7006C8353 /* iosFinalProjectCloset.xcdatamodeld in Sources */,
 				9D73D75D1FA66FC7006C8353 /* ViewController.swift in Sources */,
+				51D359F81FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift in Sources */,
 				9DF79A861FA8FC6D00DEA7DB /* Item+CoreDataClass.swift in Sources */,
 				9D12CAD81FBE21BA000D5441 /* HomePageViewController.swift in Sources */,
 				9D73D75B1FA66FC7006C8353 /* AppDelegate.swift in Sources */,

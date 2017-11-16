@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D12CAD81FBE21BA000D5441 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D12CAD71FBE21BA000D5441 /* HomePageViewController.swift */; };
 		9D73D75B1FA66FC7006C8353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D75A1FA66FC7006C8353 /* AppDelegate.swift */; };
 		9D73D75D1FA66FC7006C8353 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D75C1FA66FC7006C8353 /* ViewController.swift */; };
 		9D73D7601FA66FC7006C8353 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D73D75E1FA66FC7006C8353 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D12CAD71FBE21BA000D5441 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		9D73D7571FA66FC7006C8353 /* iosFinalProjectCloset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosFinalProjectCloset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D73D75A1FA66FC7006C8353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D73D75C1FA66FC7006C8353 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		9D73D7591FA66FC7006C8353 /* iosFinalProjectCloset */ = {
 			isa = PBXGroup;
 			children = (
+				9D12CAD71FBE21BA000D5441 /* HomePageViewController.swift */,
 				9DF79A881FA8FD1400DEA7DB /* Outfit+CoreDataClass.swift */,
 				9DF79A891FA8FD1400DEA7DB /* Outfit+CoreDataProperties.swift */,
 				9DF79A841FA8FC6D00DEA7DB /* Item+CoreDataClass.swift */,
@@ -278,6 +281,7 @@
 				9D73D7631FA66FC7006C8353 /* iosFinalProjectCloset.xcdatamodeld in Sources */,
 				9D73D75D1FA66FC7006C8353 /* ViewController.swift in Sources */,
 				9DF79A861FA8FC6D00DEA7DB /* Item+CoreDataClass.swift in Sources */,
+				9D12CAD81FBE21BA000D5441 /* HomePageViewController.swift in Sources */,
 				9D73D75B1FA66FC7006C8353 /* AppDelegate.swift in Sources */,
 				9DF79A8A1FA8FD1400DEA7DB /* Outfit+CoreDataClass.swift in Sources */,
 				9DF79A871FA8FC6D00DEA7DB /* Item+CoreDataProperties.swift in Sources */,

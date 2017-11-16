@@ -13,7 +13,7 @@ import CoreData
 @objc(Item)
 public class Item: NSManagedObject {
     
-    convenience init?(category: String?, formalTag: String?, photo: String?, weatherTag: String?) {
+    convenience init?(category: Int64, formalTag: Int64, photo: Int64, weatherTag: Int64) {
         guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else { return nil }
         
         self.init(entity: Item.entity(), insertInto: context)

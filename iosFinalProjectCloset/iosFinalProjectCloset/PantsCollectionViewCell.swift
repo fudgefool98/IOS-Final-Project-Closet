@@ -14,6 +14,7 @@ class PantsCollectionViewCell: UICollectionViewCell {
             updateUI()
         }
     }
+
     @IBOutlet weak var pantsImage: UIImageView!
     
     func updateUI() {

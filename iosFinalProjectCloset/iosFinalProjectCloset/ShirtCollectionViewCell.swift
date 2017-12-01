@@ -15,6 +15,7 @@ class ShirtCollectionViewCell: UICollectionViewCell {
             updateUI()
         }
     }
+    
     @IBOutlet weak var shirtImage: UIImageView!
     
     func updateUI() {

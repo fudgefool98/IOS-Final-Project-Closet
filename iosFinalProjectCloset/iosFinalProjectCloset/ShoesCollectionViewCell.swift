@@ -10,10 +10,12 @@ import UIKit
 
 class ShoesCollectionViewCell: UICollectionViewCell {
     var image: Image! {
+        
         didSet {
             updateUI()
         }
     }
+
     @IBOutlet weak var shoesImage: UIImageView!
     
     func updateUI() {

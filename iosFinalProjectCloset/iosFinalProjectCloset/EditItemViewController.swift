@@ -10,6 +10,7 @@ import UIKit
 
 class EditItemViewController: UIViewController {
 
+    @IBOutlet weak var itemPhoto: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

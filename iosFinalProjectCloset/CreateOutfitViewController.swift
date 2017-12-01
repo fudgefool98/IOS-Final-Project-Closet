@@ -6,6 +6,8 @@
 //  Copyright © 2017 Mandy Rogers. All rights reserved.
 //
 
+
+//
 import UIKit
 
 class CreateOutfitViewController: UIViewController{
@@ -37,19 +39,13 @@ class CreateOutfitViewController: UIViewController{
     }
     
     @IBAction func saveOutfit(_ sender: Any) {
+        
+        
+        
+        
     }
     
-    @IBAction func viewCloset(_ sender: Any) {
-    }
-    
-    @IBAction func viewOutfit(_ sender: Any) {
-    }
-    
-    @IBAction func editCloset(_ sender: Any) {
-    }
-    
-    @IBAction func createItem(_ sender: Any) {
-    }
+
     
     @IBAction func showTutorial(_ sender: Any) {
     }
@@ -88,27 +84,21 @@ extension CreateOutfitViewController: UICollectionViewDataSource {
         
         if collectionView.tag == 0 {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shirtIdentifier, for: indexPath as IndexPath) as! ShirtCollectionViewCell
+
+        
         } else if collectionView.tag == 1 {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.pantsIdentifier, for: indexPath as IndexPath) as! PantsCollectionViewCell
+
             
         } else {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shoesIdentifier, for: indexPath as IndexPath) as! ShoesCollectionViewCell
+
             
         }
         //cell.shirtImage.image = UIImage(named: "images-7")
         return cell
     }
     
-    class Image {
-        var image: UIImage!
-        
-        init(image: UIImage!) {
-            self.image = image
-        }
-        
-        
-        static func createImages() -> [Image] {
-            return [Image(image: UIImage(named:"images-1")), Image(image: UIImage(named:"images-2")), Image(image: UIImage(named:"images-3")), Image(image: UIImage(named:"images-4")), Image(image: UIImage(named:"images-5")), Image(image: UIImage(named:"images-6")), Image(image: UIImage(named:"images-7")), Image(image: UIImage(named:"images-8"))]
-        }
-    }
+
+    
 }

@@ -1,14 +1,14 @@
 //
-//  FavoriteConfirmationViewController.swift
+//  EditItemViewController.swift
 //  iosFinalProjectCloset
 //
-//  Created by Jordan Liebman on 11/16/17.
+//  Created by Mandy Rogers on 11/30/17.
 //  Copyright © 2017 Mandy Rogers. All rights reserved.
 //
 
 import UIKit
 
-class FavoriteConfirmationViewController: UIViewController {
+class EditItemViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

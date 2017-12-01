@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		051E882C1FCDF17700F16F8F /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E882B1FCDF17700F16F8F /* NewItemViewController.swift */; };
-		51D359F81FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D359F71FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift */; };
 		9D12CADC1FBE3C59000D5441 /* CreateOutfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D12CADB1FBE3C59000D5441 /* CreateOutfitViewController.swift */; };
+		9D4D05DD1FD0E1DE0075FBC3 /* ViewOutfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D05DC1FD0E1DE0075FBC3 /* ViewOutfitViewController.swift */; };
+		9D4D05DF1FD0E2790075FBC3 /* ListItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D05DE1FD0E2790075FBC3 /* ListItemsViewController.swift */; };
+		9D4D05E11FD0E29E0075FBC3 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D05E01FD0E29E0075FBC3 /* EditItemViewController.swift */; };
+		9D4D05E51FD0E3060075FBC3 /* SavePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D05E41FD0E3060075FBC3 /* SavePhotoViewController.swift */; };
 		9D73D75B1FA66FC7006C8353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D75A1FA66FC7006C8353 /* AppDelegate.swift */; };
 		9D73D75D1FA66FC7006C8353 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D75C1FA66FC7006C8353 /* ViewController.swift */; };
 		9D73D7601FA66FC7006C8353 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D73D75E1FA66FC7006C8353 /* Main.storyboard */; };
@@ -43,8 +46,11 @@
 
 /* Begin PBXFileReference section */
 		051E882B1FCDF17700F16F8F /* NewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
-		51D359F71FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteConfirmationViewController.swift; sourceTree = "<group>"; };
 		9D12CADB1FBE3C59000D5441 /* CreateOutfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateOutfitViewController.swift; path = ../CreateOutfitViewController.swift; sourceTree = "<group>"; };
+		9D4D05DC1FD0E1DE0075FBC3 /* ViewOutfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOutfitViewController.swift; sourceTree = "<group>"; };
+		9D4D05DE1FD0E2790075FBC3 /* ListItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsViewController.swift; sourceTree = "<group>"; };
+		9D4D05E01FD0E29E0075FBC3 /* EditItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
+		9D4D05E41FD0E3060075FBC3 /* SavePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhotoViewController.swift; sourceTree = "<group>"; };
 		9D73D7571FA66FC7006C8353 /* iosFinalProjectCloset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosFinalProjectCloset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D73D75A1FA66FC7006C8353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D73D75C1FA66FC7006C8353 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +119,6 @@
 		9D73D7591FA66FC7006C8353 /* iosFinalProjectCloset */ = {
 			isa = PBXGroup;
 			children = (
-				9D12CADB1FBE3C59000D5441 /* CreateOutfitViewController.swift */,
 				9DF79A881FA8FD1400DEA7DB /* Outfit+CoreDataClass.swift */,
 				9DF79A891FA8FD1400DEA7DB /* Outfit+CoreDataProperties.swift */,
 				9DF79A841FA8FC6D00DEA7DB /* Item+CoreDataClass.swift */,
@@ -121,12 +126,16 @@
 				9D73D75A1FA66FC7006C8353 /* AppDelegate.swift */,
 				9D73D75C1FA66FC7006C8353 /* ViewController.swift */,
 				9D73D75E1FA66FC7006C8353 /* Main.storyboard */,
+				9D4D05E41FD0E3060075FBC3 /* SavePhotoViewController.swift */,
+				9D4D05E01FD0E29E0075FBC3 /* EditItemViewController.swift */,
+				9D4D05DE1FD0E2790075FBC3 /* ListItemsViewController.swift */,
+				9D4D05DC1FD0E1DE0075FBC3 /* ViewOutfitViewController.swift */,
+				9D12CADB1FBE3C59000D5441 /* CreateOutfitViewController.swift */,
 				051E882B1FCDF17700F16F8F /* NewItemViewController.swift */,
 				9D73D7641FA66FC7006C8353 /* Assets.xcassets */,
 				9D73D7661FA66FC7006C8353 /* LaunchScreen.storyboard */,
 				9D73D7691FA66FC7006C8353 /* Info.plist */,
 				9D73D7611FA66FC7006C8353 /* iosFinalProjectCloset.xcdatamodeld */,
-				51D359F71FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift */,
 			);
 			path = iosFinalProjectCloset;
 			sourceTree = "<group>";
@@ -283,15 +292,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4D05DD1FD0E1DE0075FBC3 /* ViewOutfitViewController.swift in Sources */,
 				9DF79A8B1FA8FD1400DEA7DB /* Outfit+CoreDataProperties.swift in Sources */,
 				9D12CADC1FBE3C59000D5441 /* CreateOutfitViewController.swift in Sources */,
 				051E882C1FCDF17700F16F8F /* NewItemViewController.swift in Sources */,
 				9D73D7631FA66FC7006C8353 /* iosFinalProjectCloset.xcdatamodeld in Sources */,
 				9D73D75D1FA66FC7006C8353 /* ViewController.swift in Sources */,
-				51D359F81FBE1F8000E3CD08 /* FavoriteConfirmationViewController.swift in Sources */,
+				9D4D05E51FD0E3060075FBC3 /* SavePhotoViewController.swift in Sources */,
 				9DF79A861FA8FC6D00DEA7DB /* Item+CoreDataClass.swift in Sources */,
+				9D4D05E11FD0E29E0075FBC3 /* EditItemViewController.swift in Sources */,
 				9D73D75B1FA66FC7006C8353 /* AppDelegate.swift in Sources */,
 				9DF79A8A1FA8FD1400DEA7DB /* Outfit+CoreDataClass.swift in Sources */,
+				9D4D05DF1FD0E2790075FBC3 /* ListItemsViewController.swift in Sources */,
 				9DF79A871FA8FC6D00DEA7DB /* Item+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

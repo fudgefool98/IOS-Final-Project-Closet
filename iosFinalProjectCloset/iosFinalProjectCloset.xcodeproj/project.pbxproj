@@ -13,6 +13,8 @@
 		9D4D05DF1FD0E2790075FBC3 /* ListItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D05DE1FD0E2790075FBC3 /* ListItemsViewController.swift */; };
 		9D4D05E11FD0E29E0075FBC3 /* EditItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D05E01FD0E29E0075FBC3 /* EditItemViewController.swift */; };
 		9D4D05E51FD0E3060075FBC3 /* SavePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D05E41FD0E3060075FBC3 /* SavePhotoViewController.swift */; };
+		9D4D05E71FD0F1A40075FBC3 /* ShirtCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D05E61FD0F1A40075FBC3 /* ShirtCollectionViewCell.swift */; };
+		9D4D05ED1FD0F6EE0075FBC3 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D05EC1FD0F6EE0075FBC3 /* Image.swift */; };
 		9D73D75B1FA66FC7006C8353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D75A1FA66FC7006C8353 /* AppDelegate.swift */; };
 		9D73D75D1FA66FC7006C8353 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D75C1FA66FC7006C8353 /* ViewController.swift */; };
 		9D73D7601FA66FC7006C8353 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D73D75E1FA66FC7006C8353 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 		9D73D7681FA66FC7006C8353 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D73D7661FA66FC7006C8353 /* LaunchScreen.storyboard */; };
 		9D73D7731FA66FC7006C8353 /* iosFinalProjectClosetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D7721FA66FC7006C8353 /* iosFinalProjectClosetTests.swift */; };
 		9D73D77E1FA66FC7006C8353 /* iosFinalProjectClosetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73D77D1FA66FC7006C8353 /* iosFinalProjectClosetUITests.swift */; };
+		9DB809271FD1A03300414219 /* PantsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB809261FD1A03300414219 /* PantsCollectionViewCell.swift */; };
+		9DB809291FD1A07700414219 /* ShoesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB809281FD1A07700414219 /* ShoesCollectionViewCell.swift */; };
 		9DF79A861FA8FC6D00DEA7DB /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF79A841FA8FC6D00DEA7DB /* Item+CoreDataClass.swift */; };
 		9DF79A871FA8FC6D00DEA7DB /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF79A851FA8FC6D00DEA7DB /* Item+CoreDataProperties.swift */; };
 		9DF79A8A1FA8FD1400DEA7DB /* Outfit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF79A881FA8FD1400DEA7DB /* Outfit+CoreDataClass.swift */; };
@@ -51,6 +55,8 @@
 		9D4D05DE1FD0E2790075FBC3 /* ListItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsViewController.swift; sourceTree = "<group>"; };
 		9D4D05E01FD0E29E0075FBC3 /* EditItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewController.swift; sourceTree = "<group>"; };
 		9D4D05E41FD0E3060075FBC3 /* SavePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhotoViewController.swift; sourceTree = "<group>"; };
+		9D4D05E61FD0F1A40075FBC3 /* ShirtCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShirtCollectionViewCell.swift; sourceTree = "<group>"; };
+		9D4D05EC1FD0F6EE0075FBC3 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		9D73D7571FA66FC7006C8353 /* iosFinalProjectCloset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosFinalProjectCloset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D73D75A1FA66FC7006C8353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D73D75C1FA66FC7006C8353 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +71,8 @@
 		9D73D7791FA66FC7006C8353 /* iosFinalProjectClosetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosFinalProjectClosetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D73D77D1FA66FC7006C8353 /* iosFinalProjectClosetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosFinalProjectClosetUITests.swift; sourceTree = "<group>"; };
 		9D73D77F1FA66FC7006C8353 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DB809261FD1A03300414219 /* PantsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantsCollectionViewCell.swift; sourceTree = "<group>"; };
+		9DB809281FD1A07700414219 /* ShoesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DF79A841FA8FC6D00DEA7DB /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9DF79A851FA8FC6D00DEA7DB /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9DF79A881FA8FD1400DEA7DB /* Outfit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Outfit+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -119,6 +127,7 @@
 		9D73D7591FA66FC7006C8353 /* iosFinalProjectCloset */ = {
 			isa = PBXGroup;
 			children = (
+				9D4D05EC1FD0F6EE0075FBC3 /* Image.swift */,
 				9DF79A881FA8FD1400DEA7DB /* Outfit+CoreDataClass.swift */,
 				9DF79A891FA8FD1400DEA7DB /* Outfit+CoreDataProperties.swift */,
 				9DF79A841FA8FC6D00DEA7DB /* Item+CoreDataClass.swift */,
@@ -126,6 +135,9 @@
 				9D73D75A1FA66FC7006C8353 /* AppDelegate.swift */,
 				9D73D75C1FA66FC7006C8353 /* ViewController.swift */,
 				9D73D75E1FA66FC7006C8353 /* Main.storyboard */,
+				9DB809281FD1A07700414219 /* ShoesCollectionViewCell.swift */,
+				9DB809261FD1A03300414219 /* PantsCollectionViewCell.swift */,
+				9D4D05E61FD0F1A40075FBC3 /* ShirtCollectionViewCell.swift */,
 				9D4D05E41FD0E3060075FBC3 /* SavePhotoViewController.swift */,
 				9D4D05E01FD0E29E0075FBC3 /* EditItemViewController.swift */,
 				9D4D05DE1FD0E2790075FBC3 /* ListItemsViewController.swift */,
@@ -296,11 +308,15 @@
 				9DF79A8B1FA8FD1400DEA7DB /* Outfit+CoreDataProperties.swift in Sources */,
 				9D12CADC1FBE3C59000D5441 /* CreateOutfitViewController.swift in Sources */,
 				051E882C1FCDF17700F16F8F /* NewItemViewController.swift in Sources */,
+				9DB809291FD1A07700414219 /* ShoesCollectionViewCell.swift in Sources */,
+				9D4D05ED1FD0F6EE0075FBC3 /* Image.swift in Sources */,
+				9DB809271FD1A03300414219 /* PantsCollectionViewCell.swift in Sources */,
 				9D73D7631FA66FC7006C8353 /* iosFinalProjectCloset.xcdatamodeld in Sources */,
 				9D73D75D1FA66FC7006C8353 /* ViewController.swift in Sources */,
 				9D4D05E51FD0E3060075FBC3 /* SavePhotoViewController.swift in Sources */,
 				9DF79A861FA8FC6D00DEA7DB /* Item+CoreDataClass.swift in Sources */,
 				9D4D05E11FD0E29E0075FBC3 /* EditItemViewController.swift in Sources */,
+				9D4D05E71FD0F1A40075FBC3 /* ShirtCollectionViewCell.swift in Sources */,
 				9D73D75B1FA66FC7006C8353 /* AppDelegate.swift in Sources */,
 				9DF79A8A1FA8FD1400DEA7DB /* Outfit+CoreDataClass.swift in Sources */,
 				9D4D05DF1FD0E2790075FBC3 /* ListItemsViewController.swift in Sources */,

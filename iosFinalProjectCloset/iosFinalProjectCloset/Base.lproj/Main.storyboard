@@ -121,6 +121,123 @@
                                     <segment title="2"/>
                                 </segments>
                             </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qHP-L6-Bzw">
+                                <rect key="frame" x="0.0" y="81" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="lDh-mJ-Tp9">
+                                    <size key="itemSize" width="91" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="shirtCell" id="4af-ez-DWA" customClass="ShirtCollectionViewCell" customModule="iosFinalProjectCloset" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="91" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="91" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qih-zx-7dm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="91" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Qih-zx-7dm" firstAttribute="top" secondItem="4af-ez-DWA" secondAttribute="top" id="5Ne-gc-voW"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qih-zx-7dm" secondAttribute="trailing" id="968-oD-nYh"/>
+                                            <constraint firstItem="Qih-zx-7dm" firstAttribute="leading" secondItem="4af-ez-DWA" secondAttribute="leading" id="KyY-2a-Nkg"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qih-zx-7dm" secondAttribute="bottom" id="Q7K-5o-zF1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="shirtImage" destination="Qih-zx-7dm" id="P6p-d1-gJ5"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wmG-Yr-tix" id="hQE-E6-rJa"/>
+                                    <outlet property="delegate" destination="wmG-Yr-tix" id="ksD-5h-vDI"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bbx-fV-gO9">
+                                <rect key="frame" x="0.0" y="261" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="10" id="Kh2-aN-GhQ">
+                                    <size key="itemSize" width="91" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pantCell" id="5sA-TL-9CT" customClass="PantsCollectionViewCell" customModule="iosFinalProjectCloset" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="91" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="91" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-3" translatesAutoresizingMaskIntoConstraints="NO" id="e9F-Zt-OSd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="91" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="e9F-Zt-OSd" secondAttribute="bottom" id="3eE-n8-hr4"/>
+                                            <constraint firstAttribute="trailing" secondItem="e9F-Zt-OSd" secondAttribute="trailing" id="TNK-iC-BWB"/>
+                                            <constraint firstItem="e9F-Zt-OSd" firstAttribute="leading" secondItem="5sA-TL-9CT" secondAttribute="leading" id="ZgG-Ca-d9q"/>
+                                            <constraint firstItem="e9F-Zt-OSd" firstAttribute="top" secondItem="5sA-TL-9CT" secondAttribute="top" id="sLm-pA-AyG"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="pantsImage" destination="e9F-Zt-OSd" id="jRo-7o-rWX"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wmG-Yr-tix" id="3zj-95-NNP"/>
+                                    <outlet property="delegate" destination="wmG-Yr-tix" id="Kdg-TD-NzS"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MSe-yK-TK8">
+                                <rect key="frame" x="0.0" y="447" width="375" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="j1W-60-5qT">
+                                    <size key="itemSize" width="91" height="117"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="shoeCell" id="Bbq-RE-FQA" customClass="ShoesCollectionViewCell" customModule="iosFinalProjectCloset" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="0.0" width="91" height="117"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="91" height="117"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-12" translatesAutoresizingMaskIntoConstraints="NO" id="glk-Gj-zks">
+                                                    <rect key="frame" x="0.0" y="0.0" width="91" height="117"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="glk-Gj-zks" secondAttribute="bottom" id="6hI-c2-bQW"/>
+                                            <constraint firstAttribute="trailing" secondItem="glk-Gj-zks" secondAttribute="trailing" id="Vkv-Gv-FbF"/>
+                                            <constraint firstItem="glk-Gj-zks" firstAttribute="top" secondItem="Bbq-RE-FQA" secondAttribute="top" id="eYP-Ty-ONv"/>
+                                            <constraint firstItem="glk-Gj-zks" firstAttribute="leading" secondItem="Bbq-RE-FQA" secondAttribute="leading" id="jpn-TJ-e7V"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="shoesImage" destination="glk-Gj-zks" id="kPf-er-oVq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="wmG-Yr-tix" id="G4d-mu-quc"/>
+                                    <outlet property="delegate" destination="wmG-Yr-tix" id="az3-EX-5zD"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -169,10 +286,15 @@
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pantsCollectionView" destination="bbx-fV-gO9" id="CAP-Jd-GUi"/>
+                        <outlet property="shirtCollectionView" destination="qHP-L6-Bzw" id="x0Z-hn-md8"/>
+                        <outlet property="shoesCollectionView" destination="MSe-yK-TK8" id="4gt-bo-Ie2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmt-aU-ZVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="393"/>
+            <point key="canvasLocation" x="1372" y="392.65367316341832"/>
         </scene>
         <!--Edit Item View Controller-->
         <scene sceneID="li0-lN-mb6">
@@ -551,6 +673,11 @@
             <point key="canvasLocation" x="2278" y="1923"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="images-1" width="292" height="172"/>
+        <image name="images-12" width="300" height="168"/>
+        <image name="images-3" width="300" height="168"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XHa-KM-HJE"/>
         <segue reference="8tJ-1q-fKy"/>

@@ -8,12 +8,21 @@
 
 import UIKit
 
-class EditItemViewController: UIViewController {
 
-    @IBOutlet weak var itemPhoto: UIImageView!
+class EditItemViewController: UIViewController {
+   
+    @IBOutlet weak var itemPhoto: UIImageView? 
+    
+    var photo: UIImage? {
+        didSet {
+            self.itemPhoto?.image = photo
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        itemPhoto?.image = photo
         // Do any additional setup after loading the view.
     }
 

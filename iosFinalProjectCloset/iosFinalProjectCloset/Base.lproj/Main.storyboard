@@ -263,7 +263,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="NewItem"/>
                                 <connections>
-                                    <segue destination="SXO-HG-8oa" kind="popoverPresentation" popoverAnchorView="AQZ-7q-eg8" id="1bZ-GX-Zkm">
+                                    <segue destination="SXO-HG-8oa" kind="popover" popoverAnchorView="AQZ-7q-eg8" id="9C4-a6-UmU">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -534,7 +534,6 @@
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="photoButtonWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="sLR-J3-K74"/>
-                                    <segue destination="HbU-04-89u" kind="show" id="AVC-lq-qJf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-T1-7ov">
@@ -543,7 +542,6 @@
                                 <state key="normal" title="Upload Photo"/>
                                 <connections>
                                     <action selector="ChoosePhotoWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="iLv-9Y-JYr"/>
-                                    <segue destination="HbU-04-89u" kind="show" id="wou-Fd-zAr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Create a New Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-Ur-aj0">
@@ -557,6 +555,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="e8v-vj-wGt"/>
                     </view>
+                    <connections>
+                        <outlet property="takePhoto" destination="ypM-q0-lA9" id="RLW-vt-zjJ"/>
+                        <outlet property="uploadPhoto" destination="NR4-T1-7ov" id="BVr-tk-5o4"/>
+                        <segue destination="HbU-04-89u" kind="show" identifier="showImage" id="6pf-tR-uzM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8SU-mC-2wA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -662,8 +665,8 @@
         <image name="images-3" width="300" height="168"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wou-Fd-zAr"/>
-        <segue reference="XHa-KM-HJE"/>
+        <segue reference="6pf-tR-uzM"/>
+        <segue reference="70M-at-Szs"/>
         <segue reference="8tJ-1q-fKy"/>
     </inferredMetricsTieBreakers>
 </document>

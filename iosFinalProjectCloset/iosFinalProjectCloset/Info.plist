@@ -28,6 +28,8 @@
     <string>To select already taken photos and save the photos taken. </string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>To add photos to library</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

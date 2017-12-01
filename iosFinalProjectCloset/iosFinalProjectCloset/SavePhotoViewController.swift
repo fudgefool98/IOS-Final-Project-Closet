@@ -6,22 +6,24 @@
 //  Copyright © 2017 Mandy Rogers. All rights reserved.
 //
 
+
 import UIKit
 import AVFoundation
 import Photos
 
 class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    //    Somewhat followed this https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/PhotoCaptureGuide/index.html
+    
+    
+    @IBOutlet weak var takePhoto: UIButton!
+    @IBOutlet weak var uploadPhoto: UIButton!
+    
     let captureSession = AVCaptureSession()
-    
     var captureDevice: AVCaptureDevice?
-    
     var videoDeviceInput:AVCaptureDeviceInput?
-    
     var discoverySession: AVCaptureDevice.DiscoverySession?
-    
     var photo: UIImage?
-    
     var photoSampleBuffer:CMSampleBuffer?
     
     let sessionQueue = DispatchQueue(label: "session queue",
@@ -84,7 +86,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBAction func ChoosePhotoWasPressed(_ sender: Any) {
         
-        imagePicker.allowsEditing = false
+        imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
         
@@ -108,6 +110,9 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         super.viewDidLoad()
         
         imagePicker.delegate = self
+
+        takePhoto.layer.zPosition = 1
+        uploadPhoto.layer.zPosition = 1
         
         //Take good photos
         captureSession.sessionPreset = AVCaptureSession.Preset.high
@@ -254,15 +259,13 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //Lock view orientation when appears
-        //AppUtility.lockOrientation(.portrait)
         
     }
     
     //Must allow orientation to be normal afterwards.
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        //AppUtility.lockOrientation(.all)
+
     }
     
     //Pass photo forwards
@@ -273,7 +276,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         case "showImage":
             if let navController = segue.destination as? UINavigationController, let destination = navController.viewControllers.first as? EditItemViewController{
                 if let photo = photo{
-                    destination.itemPhoto.image = photo
+                    destination.photo = photo
                 }
             }
         default:
@@ -286,6 +289,9 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
 }
+
+
+
 
 
 

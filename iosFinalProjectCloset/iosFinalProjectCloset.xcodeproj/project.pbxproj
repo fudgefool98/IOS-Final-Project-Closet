@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		051E882C1FCDF17700F16F8F /* SearchItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051E882B1FCDF17700F16F8F /* SearchItemViewController.swift */; };
+		051F2AF31FD4A9C40006F183 /* SearchItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051F2AF21FD4A9C40006F183 /* SearchItemViewController.swift */; };
 		9D12CADC1FBE3C59000D5441 /* CreateOutfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D12CADB1FBE3C59000D5441 /* CreateOutfitViewController.swift */; };
 		9D4D05DD1FD0E1DE0075FBC3 /* ViewOutfitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D05DC1FD0E1DE0075FBC3 /* ViewOutfitViewController.swift */; };
 		9D4D05DF1FD0E2790075FBC3 /* ListItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4D05DE1FD0E2790075FBC3 /* ListItemsViewController.swift */; };
@@ -49,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		051E882B1FCDF17700F16F8F /* SearchItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemViewController.swift; sourceTree = "<group>"; };
+		051F2AF21FD4A9C40006F183 /* SearchItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemViewController.swift; sourceTree = "<group>"; };
 		9D12CADB1FBE3C59000D5441 /* CreateOutfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateOutfitViewController.swift; path = ../CreateOutfitViewController.swift; sourceTree = "<group>"; };
 		9D4D05DC1FD0E1DE0075FBC3 /* ViewOutfitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOutfitViewController.swift; sourceTree = "<group>"; };
 		9D4D05DE1FD0E2790075FBC3 /* ListItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsViewController.swift; sourceTree = "<group>"; };
@@ -143,11 +143,11 @@
 				9D4D05DE1FD0E2790075FBC3 /* ListItemsViewController.swift */,
 				9D4D05DC1FD0E1DE0075FBC3 /* ViewOutfitViewController.swift */,
 				9D12CADB1FBE3C59000D5441 /* CreateOutfitViewController.swift */,
-				051E882B1FCDF17700F16F8F /* SearchItemViewController.swift */,
 				9D73D7641FA66FC7006C8353 /* Assets.xcassets */,
 				9D73D7661FA66FC7006C8353 /* LaunchScreen.storyboard */,
 				9D73D7691FA66FC7006C8353 /* Info.plist */,
 				9D73D7611FA66FC7006C8353 /* iosFinalProjectCloset.xcdatamodeld */,
+				051F2AF21FD4A9C40006F183 /* SearchItemViewController.swift */,
 			);
 			path = iosFinalProjectCloset;
 			sourceTree = "<group>";
@@ -307,9 +307,9 @@
 				9D4D05DD1FD0E1DE0075FBC3 /* ViewOutfitViewController.swift in Sources */,
 				9DF79A8B1FA8FD1400DEA7DB /* Outfit+CoreDataProperties.swift in Sources */,
 				9D12CADC1FBE3C59000D5441 /* CreateOutfitViewController.swift in Sources */,
-				051E882C1FCDF17700F16F8F /* SearchItemViewController.swift in Sources */,
 				9DB809291FD1A07700414219 /* ShoesCollectionViewCell.swift in Sources */,
 				9D4D05ED1FD0F6EE0075FBC3 /* Image.swift in Sources */,
+				051F2AF31FD4A9C40006F183 /* SearchItemViewController.swift in Sources */,
 				9DB809271FD1A03300414219 /* PantsCollectionViewCell.swift in Sources */,
 				9D73D7631FA66FC7006C8353 /* iosFinalProjectCloset.xcdatamodeld in Sources */,
 				9D73D75D1FA66FC7006C8353 /* ViewController.swift in Sources */,

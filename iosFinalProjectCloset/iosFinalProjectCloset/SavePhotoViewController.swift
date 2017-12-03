@@ -288,6 +288,12 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func closePopUp(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+        
+        
+    }
 }
 
 

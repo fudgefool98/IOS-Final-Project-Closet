@@ -12,6 +12,20 @@ import UIKit
 class EditItemViewController: UIViewController {
    
     @IBOutlet weak var itemPhoto: UIImageView? 
+    @IBOutlet weak var editClothing: UISegmentedControl!
+    @IBOutlet weak var editWeather: UISegmentedControl!
+    @IBOutlet weak var editFormal: UISegmentedControl!
+    
+    @IBAction func saveItem(_ sender: Any) {
+    }
+    
+    @IBAction func deleteItem(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+//        let managedContext = appDelegate?.managedObjectContext
+//        let fetchRequest = NSFetchRequest(entityName: "Item")
+        fetchRequest.predicate = NSPredicate(format: "photo = %@", "\(photo)")
+    }
+    
     
     var photo: UIImage? {
         didSet {
@@ -32,6 +46,7 @@ class EditItemViewController: UIViewController {
     }
     
 
+    
     /*
     // MARK: - Navigation
 

@@ -139,8 +139,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="104" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="images-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qih-zx-7dm">
-                                                    <rect key="frame" x="10" y="10" width="84" height="108"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qih-zx-7dm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="128"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -178,8 +178,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="104" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="images-3" translatesAutoresizingMaskIntoConstraints="NO" id="e9F-Zt-OSd">
-                                                    <rect key="frame" x="10" y="10" width="84" height="108"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-3" translatesAutoresizingMaskIntoConstraints="NO" id="e9F-Zt-OSd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="128"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -244,15 +244,21 @@
                             <constraint firstItem="781-q1-Gkm" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="340" id="6Mc-Ev-Tzr"/>
                             <constraint firstItem="zFd-V8-xKv" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="153" id="6Tf-NG-cSX"/>
                             <constraint firstItem="bWE-UL-Z7d" firstAttribute="trailing" secondItem="781-q1-Gkm" secondAttribute="trailing" constant="47" id="9AJ-3F-j3N"/>
+                            <constraint firstItem="dQ2-2L-FhH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kpH-Ni-yXj" secondAttribute="leading" constant="20" symbolic="YES" id="Cm7-vH-Lzb"/>
                             <constraint firstItem="bWE-UL-Z7d" firstAttribute="trailing" secondItem="zFd-V8-xKv" secondAttribute="trailing" constant="47" id="DD0-dl-vFL"/>
-                            <constraint firstItem="JW0-2V-2iI" firstAttribute="leading" secondItem="bWE-UL-Z7d" secondAttribute="leading" constant="33" id="Hnn-sw-F69"/>
+                            <constraint firstItem="JW0-2V-2iI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bWE-UL-Z7d" secondAttribute="leading" id="Hnn-sw-F69"/>
                             <constraint firstItem="kGU-6X-EWI" firstAttribute="leading" secondItem="bWE-UL-Z7d" secondAttribute="leading" constant="33" id="KFq-bB-lD7"/>
-                            <constraint firstItem="4Zr-oF-nZv" firstAttribute="leading" secondItem="bWE-UL-Z7d" secondAttribute="leading" constant="33" id="O3P-1i-cQV"/>
+                            <constraint firstItem="4Zr-oF-nZv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bWE-UL-Z7d" secondAttribute="leading" id="O3P-1i-cQV"/>
                             <constraint firstItem="kGU-6X-EWI" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="340" id="QE3-9G-sas"/>
                             <constraint firstItem="JW0-2V-2iI" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="508" id="SwI-mJ-687"/>
                             <constraint firstItem="bWE-UL-Z7d" firstAttribute="trailing" secondItem="dQ2-2L-FhH" secondAttribute="trailing" constant="47" id="Vp8-iY-IYC"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kGU-6X-EWI" secondAttribute="trailing" constant="20" symbolic="YES" id="Vyb-7u-J9o"/>
+                            <constraint firstItem="781-q1-Gkm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kpH-Ni-yXj" secondAttribute="leading" constant="20" symbolic="YES" id="XOv-pD-BTs"/>
                             <constraint firstItem="dQ2-2L-FhH" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="508" id="aWJ-1F-6Mf"/>
                             <constraint firstItem="4Zr-oF-nZv" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="153" id="eht-uu-zFR"/>
+                            <constraint firstAttribute="trailing" secondItem="JW0-2V-2iI" secondAttribute="trailing" constant="271" id="fNw-IU-1zK"/>
+                            <constraint firstItem="zFd-V8-xKv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kpH-Ni-yXj" secondAttribute="leading" constant="20" symbolic="YES" id="mqY-ie-700"/>
+                            <constraint firstAttribute="trailing" secondItem="4Zr-oF-nZv" secondAttribute="trailing" constant="271" id="mu7-pg-exB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bWE-UL-Z7d"/>
                     </view>
@@ -677,6 +683,7 @@
         <!--Navigation Controller-->
         <scene sceneID="PSS-dm-AK7">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t6x-vX-uam" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I06-nQ-Mdz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iRB-GQ-7XB">
@@ -688,7 +695,6 @@
                         <segue destination="OAN-nu-eD1" kind="relationship" relationship="rootViewController" id="QOm-fD-wZO"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t6x-vX-uam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2278" y="1923"/>
         </scene>

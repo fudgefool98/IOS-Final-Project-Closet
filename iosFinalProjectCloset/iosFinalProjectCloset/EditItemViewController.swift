@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 
 class EditItemViewController: UIViewController {
    
@@ -20,10 +20,11 @@ class EditItemViewController: UIViewController {
     }
     
     @IBAction func deleteItem(_ sender: Any) {
+        var photo = itemPhoto?.image
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
-//        let managedContext = appDelegate?.managedObjectContext
-//        let fetchRequest = NSFetchRequest(entityName: "Item")
-       // fetchRequest.predicate = NSPredicate(format: "photo = %@", "\(photo)")
+        let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
+       fetchRequest.predicate = NSPredicate(format: "photo = %@ AND category == %@ and weatherTag == %@ and formalTag == %@", "\(itemPhoto)", "\(editClothing)", "\(editWeather)", "\(editFormal)")
     }
     
     

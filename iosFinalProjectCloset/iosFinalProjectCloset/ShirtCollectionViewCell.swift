@@ -9,10 +9,34 @@
 import UIKit
 
 class ShirtCollectionViewCell: UICollectionViewCell {
+    var toggleCellSelection = true
+    var selectedCells = [UICollectionViewCell]()
     
     var image: Image! {
         didSet {
             updateUI()
+        }
+    }
+    
+    override var isSelected: Bool {
+        didSet {
+            
+            if (toggleCellSelection == true) {
+                toggleCellSelection = false
+                shirtImage.alpha = 0.75
+                shirtImage?.layer.borderWidth = 2
+                shirtImage?.layer.borderColor = UIColor.black.cgColor
+            } else {
+                toggleCellSelection = true
+                shirtImage.alpha = 1.0
+                shirtImage?.layer.borderWidth = 0
+                shirtImage?.layer.borderColor = UIColor.white.cgColor
+            }
+            
+            
+            
+            
+           
         }
     }
     

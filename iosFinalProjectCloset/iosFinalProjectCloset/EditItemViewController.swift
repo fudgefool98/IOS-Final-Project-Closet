@@ -23,7 +23,7 @@ class EditItemViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
 //        let managedContext = appDelegate?.managedObjectContext
 //        let fetchRequest = NSFetchRequest(entityName: "Item")
-        fetchRequest.predicate = NSPredicate(format: "photo = %@", "\(photo)")
+       // fetchRequest.predicate = NSPredicate(format: "photo = %@", "\(photo)")
     }
     
     

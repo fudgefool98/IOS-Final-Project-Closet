@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Zr-oF-nZv">
-                                <rect key="frame" x="33" y="217" width="71" height="29"/>
+                                <rect key="frame" x="33" y="173" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -82,7 +82,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kGU-6X-EWI">
-                                <rect key="frame" x="33" y="404" width="71" height="29"/>
+                                <rect key="frame" x="33" y="360" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -90,7 +90,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="781-q1-Gkm">
-                                <rect key="frame" x="257" y="404" width="71" height="29"/>
+                                <rect key="frame" x="257" y="360" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -98,7 +98,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JW0-2V-2iI">
-                                <rect key="frame" x="33" y="572" width="71" height="29"/>
+                                <rect key="frame" x="33" y="528" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -106,7 +106,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dQ2-2L-FhH">
-                                <rect key="frame" x="257" y="572" width="71" height="29"/>
+                                <rect key="frame" x="257" y="528" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -114,7 +114,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zFd-V8-xKv">
-                                <rect key="frame" x="257" y="217" width="71" height="29"/>
+                                <rect key="frame" x="257" y="173" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -418,7 +418,7 @@
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchItems:" destination="4EM-dN-Pqw" eventType="touchUpInside" id="CzR-wH-mMM"/>
-                                    <segue destination="I06-nQ-Mdz" kind="show" id="DH4-fb-Afl"/>
+                                    <segue destination="I06-nQ-Mdz" kind="show" identifier="showItems" id="DH4-fb-Afl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VQ-5s-ZhD">
@@ -693,7 +693,6 @@
         <image name="images-3" width="300" height="168"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Uk-aj-Ibb"/>
         <segue reference="70M-at-Szs"/>
         <segue reference="8tJ-1q-fKy"/>
     </inferredMetricsTieBreakers>

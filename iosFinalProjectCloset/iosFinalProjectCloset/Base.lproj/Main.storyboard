@@ -311,14 +311,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FaZ-fe-LXY">
-                                <rect key="frame" x="97" y="100" width="181" height="91"/>
+                                <rect key="frame" x="97" y="56" width="181" height="91"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="P01-NW-Iv1"/>
                                     <constraint firstAttribute="width" constant="181" id="UMy-Ia-TBf"/>
                                 </constraints>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Iom-Go-rgd">
-                                <rect key="frame" x="108.5" y="294" width="158" height="29"/>
+                                <rect key="frame" x="108.5" y="250" width="158" height="29"/>
                                 <segments>
                                     <segment title="Shirt"/>
                                     <segment title="Pants"/>
@@ -326,7 +326,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bKH-pR-mdY">
-                                <rect key="frame" x="111.5" y="392" width="152" height="29"/>
+                                <rect key="frame" x="111.5" y="348" width="152" height="29"/>
                                 <segments>
                                     <segment title="Cold"/>
                                     <segment title="All"/>
@@ -334,7 +334,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BoZ-W3-7uR">
-                                <rect key="frame" x="81.5" y="510" width="212" height="29"/>
+                                <rect key="frame" x="81.5" y="466" width="212" height="29"/>
                                 <segments>
                                     <segment title="Casual"/>
                                     <segment title="Everyday"/>
@@ -342,7 +342,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZc-Zv-P2h">
-                                <rect key="frame" x="214" y="588" width="34" height="30"/>
+                                <rect key="frame" x="214" y="544" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveItem:" destination="FLX-df-bzM" eventType="touchUpInside" id="GJX-sf-Krj"/>
@@ -350,7 +350,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUa-Wz-7DU">
-                                <rect key="frame" x="127" y="588" width="45" height="30"/>
+                                <rect key="frame" x="127" y="544" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
                                 <connections>
                                     <action selector="deleteItem:" destination="FLX-df-bzM" eventType="touchUpInside" id="TCu-8m-OxO"/>
@@ -398,7 +398,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bXs-BE-B4C">
-                                <rect key="frame" x="108.5" y="160" width="158" height="29"/>
+                                <rect key="frame" x="108.5" y="116" width="158" height="29"/>
                                 <segments>
                                     <segment title="Shirt"/>
                                     <segment title="Pants"/>
@@ -406,7 +406,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oe9-3V-O6m">
-                                <rect key="frame" x="81.5" y="383" width="212" height="29"/>
+                                <rect key="frame" x="81.5" y="339" width="212" height="29"/>
                                 <segments>
                                     <segment title="Casual"/>
                                     <segment title="Everyday"/>
@@ -414,7 +414,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF4-kv-Y0l">
-                                <rect key="frame" x="163.5" y="496" width="48" height="30"/>
+                                <rect key="frame" x="163.5" y="452" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchItems:" destination="4EM-dN-Pqw" eventType="touchUpInside" id="CzR-wH-mMM"/>
@@ -422,14 +422,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VQ-5s-ZhD">
-                                <rect key="frame" x="168" y="559" width="39" height="30"/>
+                                <rect key="frame" x="168" y="515" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetSegments:" destination="4EM-dN-Pqw" eventType="touchUpInside" id="gKf-aD-Qyp"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z2A-N4-Mx2">
-                                <rect key="frame" x="111.5" y="294" width="152" height="29"/>
+                                <rect key="frame" x="111.5" y="250" width="152" height="29"/>
                                 <segments>
                                     <segment title="Cold"/>
                                     <segment title="All"/>
@@ -513,7 +513,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BXA-ZI-ncH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Olb-LS-BMQ"/>
+                    <navigationItem key="navigationItem" id="Olb-LS-BMQ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="OVM-WT-yXc">
+                            <connections>
+                                <segue destination="4EM-dN-Pqw" kind="show" id="QZZ-qW-C4O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSG-13-6t3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -693,7 +699,8 @@
         <image name="images-3" width="300" height="168"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="70M-at-Szs"/>
+        <segue reference="QZZ-qW-C4O"/>
+        <segue reference="XHa-KM-HJE"/>
         <segue reference="8tJ-1q-fKy"/>
     </inferredMetricsTieBreakers>
 </document>

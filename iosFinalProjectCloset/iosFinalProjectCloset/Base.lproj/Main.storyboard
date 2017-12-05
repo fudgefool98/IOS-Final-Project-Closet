@@ -418,7 +418,7 @@
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchItems:" destination="4EM-dN-Pqw" eventType="touchUpInside" id="CzR-wH-mMM"/>
-                                    <segue destination="I06-nQ-Mdz" kind="show" id="DH4-fb-Afl"/>
+                                    <segue destination="I06-nQ-Mdz" kind="show" identifier="showItems" id="DH4-fb-Afl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VQ-5s-ZhD">

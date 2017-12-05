@@ -80,24 +80,27 @@ extension CreateOutfitViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell: UICollectionViewCell
-        
-        if collectionView.tag == 0 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shirtIdentifier, for: indexPath as IndexPath) as! ShirtCollectionViewCell
-
-        
-        } else if collectionView.tag == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.pantsIdentifier, for: indexPath as IndexPath) as! PantsCollectionViewCell
-
-            
-        } else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shoesIdentifier, for: indexPath as IndexPath) as! ShoesCollectionViewCell
-
+        switch collectionView.tag {
+        case 0:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shirtIdentifier, for: indexPath as IndexPath) as! ShirtCollectionViewCell
+            cell.image = self.images[indexPath.row]
+            return cell
+        case 1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.pantsIdentifier, for: indexPath as IndexPath) as! PantsCollectionViewCell
+            cell.image = self.images[indexPath.row]
+            return cell
+        default:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shoesIdentifier, for: indexPath as IndexPath) as! ShoesCollectionViewCell
+            cell.image = self.images[indexPath.row]
+            return cell
             
         }
-        //cell.shirtImage.image = UIImage(named: "images-7")
-        return cell
+        
+        
     }
+    
+
+    
     
 
     

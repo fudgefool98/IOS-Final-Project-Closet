@@ -9,6 +9,7 @@
 
 //
 import UIKit
+import CoreData
 
 class CreateOutfitViewController: UIViewController{
 
@@ -26,6 +27,9 @@ class CreateOutfitViewController: UIViewController{
     @IBOutlet weak var shirtWeatherSegment: UISegmentedControl!
     
     var images = Image.createImages()
+    var selectedShirtIndexPath: IndexPath?
+    var selectedShoesIndexPath: IndexPath?
+    var selectedPantsIndexPath: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +45,38 @@ class CreateOutfitViewController: UIViewController{
     @IBAction func saveOutfit(_ sender: Any) {
         
         
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        let managedContext = appDelegate.persistentContainer.viewContext
         
+        if let shirtCollectionView = self.shirtCollectionView,
+        let pantsCollectionView = self.pantsCollectionView,
+        let shoesCollectionView = self.shoesCollectionView {
+            if let shirtIndexPath = shirtCollectionView.indexPathsForSelectedItems?.first,
+            let shoesIndexPath = shoesCollectionView.indexPathsForSelectedItems?.first,
+            let pantsIndexPath = pantsCollectionView.indexPathsForSelectedItems?.first {
+                if let shirtCell = shirtCollectionView.cellForItem(at: shirtIndexPath) as? ShirtCollectionViewCell,
+                let pantsCell = pantsCollectionView.cellForItem(at: pantsIndexPath) as? PantsCollectionViewCell,
+                let shoesCell = shoesCollectionView.cellForItem(at: shoesIndexPath) as? ShoesCollectionViewCell {
+                    if let shirtData = shirtCell.image,
+                    let pantsData = pantsCell.image,
+                    let shoesData = shoesCell.image {
+                        let resultShirt = fetchItem(data: shirtData)
+                        let resultPants = fetchItem(data: pantsData)
+                        let resultShoes = fetchItem(data: shoesData)
+                        
+                        var _ = Outfit(shoes: resultShoes.first, shirt: resultShirt.first, pants: resultPants.first)
+                        
+                        do {
+                            try managedContext.save()
+                        } catch let error as NSError {
+                            print("Could not save. \(error)")
+                        }
+                    }
+                }
+        }
+       
         
+        }
     }
     
 
@@ -63,7 +97,7 @@ class CreateOutfitViewController: UIViewController{
 
 }
 
-extension CreateOutfitViewController: UICollectionViewDataSource {
+extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -99,6 +133,44 @@ extension CreateOutfitViewController: UICollectionViewDataSource {
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView.tag {
+        case 0:
+            if let selectedShirtIndexPath = self.selectedShirtIndexPath {
+                let cell = shirtCollectionView.cellForItem(at: selectedShirtIndexPath)
+                cell?.isSelected = false
+                collectionView.deselectItem(at: selectedShirtIndexPath, animated: true)
+            }
+            
+            self.selectedShirtIndexPath = indexPath
+        case 1:
+            if let selectedPantsIndexPath = self.selectedPantsIndexPath {
+                let cell = pantsCollectionView.cellForItem(at: selectedPantsIndexPath)
+                cell?.isSelected = false
+                collectionView.deselectItem(at: selectedPantsIndexPath, animated: true)
+            }
+            
+            self.selectedPantsIndexPath = indexPath
+        default:
+            if let selectedShoesIndexPath = self.selectedShoesIndexPath {
+                let cell = shoesCollectionView.cellForItem(at: selectedShoesIndexPath)
+                cell?.isSelected = false
+                collectionView.deselectItem(at: selectedShoesIndexPath, animated: true)
+            }
+            
+            self.selectedShoesIndexPath = indexPath
+        }
+    }
+
+    func fetchItem(data: Image) -> [Item] {
+        let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "photo == %@" , "\(String(describing: data))")
+        
+        let result = try? managedContext?.fetch(fetchRequest)
+        let items = result as! [Item]
+        return items
+    }
 
     
     

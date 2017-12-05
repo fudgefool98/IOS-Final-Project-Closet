@@ -74,7 +74,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Zr-oF-nZv">
-                                <rect key="frame" x="33" y="173" width="71" height="29"/>
+                                <rect key="frame" x="33" y="217" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -82,7 +82,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kGU-6X-EWI">
-                                <rect key="frame" x="33" y="360" width="71" height="29"/>
+                                <rect key="frame" x="33" y="404" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -90,7 +90,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="781-q1-Gkm">
-                                <rect key="frame" x="257" y="360" width="71" height="29"/>
+                                <rect key="frame" x="257" y="404" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -98,7 +98,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JW0-2V-2iI">
-                                <rect key="frame" x="33" y="528" width="71" height="29"/>
+                                <rect key="frame" x="33" y="572" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -106,7 +106,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dQ2-2L-FhH">
-                                <rect key="frame" x="257" y="528" width="71" height="29"/>
+                                <rect key="frame" x="257" y="572" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -114,7 +114,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zFd-V8-xKv">
-                                <rect key="frame" x="257" y="173" width="71" height="29"/>
+                                <rect key="frame" x="257" y="217" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -289,6 +289,9 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="SaveOutfit"/>
                                 </button>
+                                <connections>
+                                    <action selector="saveOutfit:" destination="wmG-Yr-tix" id="9Ce-4x-SlC"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -296,7 +299,7 @@
                         <outlet property="pantsCollectionView" destination="bbx-fV-gO9" id="CAP-Jd-GUi"/>
                         <outlet property="pantsFormalSegment" destination="781-q1-Gkm" id="BdH-3H-0iK"/>
                         <outlet property="pantsWeatherSegment" destination="kGU-6X-EWI" id="FwQ-OH-yKO"/>
-                        <outlet property="shirtCollectionView" destination="qHP-L6-Bzw" id="x0Z-hn-md8"/>
+                        <outlet property="shirtCollectionView" destination="qHP-L6-Bzw" id="r1N-dg-6NK"/>
                         <outlet property="shirtFormalSegment" destination="zFd-V8-xKv" id="gzp-9y-nrI"/>
                         <outlet property="shirtWeatherSegment" destination="4Zr-oF-nZv" id="eQi-Ar-KNn"/>
                         <outlet property="shoesCollectionView" destination="MSe-yK-TK8" id="4gt-bo-Ie2"/>
@@ -683,7 +686,6 @@
         <!--Navigation Controller-->
         <scene sceneID="PSS-dm-AK7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t6x-vX-uam" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I06-nQ-Mdz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iRB-GQ-7XB">
@@ -695,6 +697,7 @@
                         <segue destination="OAN-nu-eD1" kind="relationship" relationship="rootViewController" id="QOm-fD-wZO"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t6x-vX-uam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2278" y="1923"/>
         </scene>
@@ -707,6 +710,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="QZZ-qW-C4O"/>
         <segue reference="XHa-KM-HJE"/>
-        <segue reference="8tJ-1q-fKy"/>
+        <segue reference="sis-b2-Sou"/>
     </inferredMetricsTieBreakers>
 </document>

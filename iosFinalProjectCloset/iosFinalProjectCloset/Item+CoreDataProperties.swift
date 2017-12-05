@@ -2,7 +2,7 @@
 //  Item+CoreDataProperties.swift
 //  iosFinalProjectCloset
 //
-//  Created by Tiara Jarrett on 11/9/17.
+//  Created by Tiara Jarrett on 12/5/17.
 //  Copyright © 2017 Mandy Rogers. All rights reserved.
 //
 //
@@ -19,7 +19,7 @@ extension Item {
 
     @NSManaged public var category: Int64
     @NSManaged public var formalTag: Int64
-    @NSManaged public var photo: Int64
+    @NSManaged public var rawPhoto: NSData?
     @NSManaged public var weatherTag: Int64
 
 }

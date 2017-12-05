@@ -13,7 +13,19 @@ import CoreData
 @objc(Item)
 public class Item: NSManagedObject {
     
-    convenience init?(category: Int64, formalTag: Int64, photo: Int64, weatherTag: Int64) {
+    var photo: UIImage? {
+        get {
+            guard let data = self.rawPhoto as Data? else { return nil }
+            
+            return UIImage(data: data)
+        }
+        set {
+            guard let photo = newValue else { return }
+            self.rawPhoto = UIImagePNGRepresentation(photo) as NSData?
+        }
+    }
+    
+    convenience init?(category: Int64, formalTag: Int64, photo: UIImage?, weatherTag: Int64) {
         guard let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext else { return nil }
         
         self.init(entity: Item.entity(), insertInto: context)

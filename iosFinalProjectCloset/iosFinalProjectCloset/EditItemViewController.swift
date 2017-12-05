@@ -17,14 +17,43 @@ class EditItemViewController: UIViewController {
     @IBOutlet weak var editFormal: UISegmentedControl!
     
     @IBAction func saveItem(_ sender: Any) {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let _ = Item(category: Int64(editClothing.selectedSegmentIndex), formalTag: Int64(editFormal.selectedSegmentIndex), photo: itemPhoto?.image, weatherTag: Int64(editWeather.selectedSegmentIndex))
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error)")
+        }
+        
+        self.navigationController?.popViewController(animated: true)
+
     }
     
     @IBAction func deleteItem(_ sender: Any) {
-        var photo = itemPhoto?.image
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        //var photo = itemPhoto?.image
         let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "photo == %@ AND category == %@ AND weatherTag == %@ AND formalTag" , "\(itemPhoto)", "\(editClothing)", "\(editWeather)", "\(editFormal)")
+        fetchRequest.predicate = NSPredicate(format: "photo == %@ AND category == %@ AND weatherTag == %@ AND formalTag" , "\(String(describing: itemPhoto))", "\(editClothing)", "\(editWeather)", "\(editFormal)")
+        
+        let result = try? managedContext?.fetch(fetchRequest)
+        let resultData = result as! [Item]
+        
+        for object in resultData {
+            delete(object)
+        }
+        
+        do {
+            try managedContext?.save()
+            print("saved!")
+        } catch let error as NSError  {
+            print("Could not save \(error)")
+        } catch {
+            
+        }
     }
     
     

@@ -9,8 +9,6 @@
 import UIKit
 
 class ShirtCollectionViewCell: UICollectionViewCell {
-    var toggleCellSelection = true
-    var selectedCells = [UICollectionViewCell]()
     
     var image: Image! {
         didSet {
@@ -18,26 +16,30 @@ class ShirtCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    
     override var isSelected: Bool {
-        didSet {
-            if (toggleCellSelection == true) {
-                toggleCellSelection = false
-                shirtImage.alpha = 0.75
-                shirtImage?.layer.borderWidth = 2
-                shirtImage?.layer.borderColor = UIColor.black.cgColor
-            } else {
-                toggleCellSelection = true
-                shirtImage.alpha = 1.0
-                shirtImage?.layer.borderWidth = 0
-                shirtImage?.layer.borderColor = UIColor.white.cgColor
+        get {
+            return super.isSelected;
+        }
+        
+        set {
+            if (super.isSelected != newValue) {
+                super.isSelected = newValue
+        
+                
+                if (newValue == true) {
+                    shirtImage.alpha = 0.75
+                    shirtImage?.layer.borderWidth = 2
+                    shirtImage?.layer.borderColor = UIColor.black.cgColor
+                } else {
+                    shirtImage.alpha = 1.0
+                    shirtImage?.layer.borderWidth = 0
+                    shirtImage?.layer.borderColor = UIColor.white.cgColor
+                }
             }
-            
-            
-            
-            
-           
         }
     }
+
     
     @IBOutlet weak var shirtImage: UIImageView!
     

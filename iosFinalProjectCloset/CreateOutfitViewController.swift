@@ -27,6 +27,10 @@ class CreateOutfitViewController: UIViewController{
     @IBOutlet weak var shirtWeatherSegment: UISegmentedControl!
     
     var images = Image.createImages()
+    var cellShirtStatus:NSMutableDictionary = NSMutableDictionary();
+    var cellPantsStatus:NSMutableDictionary = NSMutableDictionary();
+    var cellShoesStatus:NSMutableDictionary = NSMutableDictionary();
+    
 //    var shirtImages = Image.createItems(data: 0)
 //    var pantsImages = Image.createItems(data: 1)
 //    var shoesImages = Image.createItems(data: 2)
@@ -126,19 +130,24 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        
+        
         switch collectionView.tag {
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shirtIdentifier, for: indexPath as IndexPath) as! ShirtCollectionViewCell
+            cell.isSelected = (cellShirtStatus[indexPath.row] as? Bool) ?? false
             cell.image = self.images[indexPath.row]
             //cell.shirtImage.image = self.shirtImages[indexPath.row].photo
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.pantsIdentifier, for: indexPath as IndexPath) as! PantsCollectionViewCell
+            cell.isSelected = (cellPantsStatus[indexPath.row] as? Bool) ?? false
             cell.image = self.images[indexPath.row]
             //cell.pantsImage.image = self.pantsImages[indexPath.row].photo
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shoesIdentifier, for: indexPath as IndexPath) as! ShoesCollectionViewCell
+            cell.isSelected = (cellShoesStatus[indexPath.row] as? Bool) ?? false
             cell.image = self.images[indexPath.row]
             //cell.shoesImage.image = self.shoesImages[indexPath.row].photo
             return cell
@@ -149,10 +158,13 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         switch collectionView.tag {
         case 0:
             if let selectedShirtIndexPath = self.selectedShirtIndexPath {
                 let cell = shirtCollectionView.cellForItem(at: selectedShirtIndexPath)
+                cell?.isSelected = true;
+                self.cellShirtStatus[indexPath.row] = true;
                 cell?.isSelected = false
                 collectionView.deselectItem(at: selectedShirtIndexPath, animated: true)
             }
@@ -161,6 +173,8 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
         case 1:
             if let selectedPantsIndexPath = self.selectedPantsIndexPath {
                 let cell = pantsCollectionView.cellForItem(at: selectedPantsIndexPath)
+                cell?.isSelected = true;
+                self.cellPantsStatus[indexPath.row] = true;
                 cell?.isSelected = false
                 collectionView.deselectItem(at: selectedPantsIndexPath, animated: true)
             }
@@ -169,6 +183,8 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
         default:
             if let selectedShoesIndexPath = self.selectedShoesIndexPath {
                 let cell = shoesCollectionView.cellForItem(at: selectedShoesIndexPath)
+                cell?.isSelected = true;
+                self.cellShoesStatus[indexPath.row] = true;
                 cell?.isSelected = false
                 collectionView.deselectItem(at: selectedShoesIndexPath, animated: true)
             }
@@ -177,6 +193,8 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
         }
     }
 
+    
+    
     func fetchItem(data: Image) -> [Item] {
         let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()

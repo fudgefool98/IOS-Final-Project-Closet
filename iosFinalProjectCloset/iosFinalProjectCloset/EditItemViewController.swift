@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 class EditItemViewController: UIViewController {
    
     @IBOutlet weak var itemPhoto: UIImageView? 
@@ -65,7 +66,6 @@ class EditItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         itemPhoto?.image = photo
         // Do any additional setup after loading the view.
     }

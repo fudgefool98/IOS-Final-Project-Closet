@@ -97,8 +97,10 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             photo = pickedImage
         }
-        picker.dismiss(animated: true, completion: nil)
+        imagePicker.dismiss(animated: true, completion: nil)
+        print("Check!")
         performSegue(withIdentifier: "showImage", sender: self)
+        print("Check2")
         
     }
     
@@ -270,16 +272,23 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     
     //Pass photo forwards
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let identifier = segue.identifier else {return }
-        
+        guard let identifier = segue.identifier else { return }
+        print("Check3")
         switch identifier {
         case "showImage":
-            if let navController = segue.destination as? UINavigationController, let destination = navController.viewControllers.first as? EditItemViewController{
+            print("check4")
+            if let navController = segue.destination as? UINavigationController {
+                print ("check5")
+                if let destination = navController.viewControllers.first as? EditItemViewController{
+                    print("check6")
                 if let photo = photo{
+                    print("check7")
                     destination.photo = photo
+                }
                 }
             }
         default:
+            print("DEFAULT")
             break
         }
     }
@@ -288,6 +297,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         super.didReceiveMemoryWarning()
     }
     
+
     @IBAction func closePopUp(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)

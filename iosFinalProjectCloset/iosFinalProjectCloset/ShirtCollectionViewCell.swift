@@ -20,7 +20,6 @@ class ShirtCollectionViewCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            
             if (toggleCellSelection == true) {
                 toggleCellSelection = false
                 shirtImage.alpha = 0.75

@@ -27,6 +27,10 @@ class CreateOutfitViewController: UIViewController{
     @IBOutlet weak var shirtWeatherSegment: UISegmentedControl!
     
     var images = Image.createImages()
+//    var shirtImages = Image.createItems(data: 0)
+//    var pantsImages = Image.createItems(data: 1)
+//    var shoesImages = Image.createItems(data: 2)
+    
     var selectedShirtIndexPath: IndexPath?
     var selectedShoesIndexPath: IndexPath?
     var selectedPantsIndexPath: IndexPath?
@@ -104,6 +108,14 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
+//        switch collectionView.tag {
+//        case 0:
+//            return shirtImages.count
+//        case 1:
+//            return pantsImages.count
+//        default:
+//            return shoesImages.count
+//        }
     }
     
     private struct Storyboard {
@@ -118,14 +130,17 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shirtIdentifier, for: indexPath as IndexPath) as! ShirtCollectionViewCell
             cell.image = self.images[indexPath.row]
+            //cell.shirtImage.image = self.shirtImages[indexPath.row].photo
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.pantsIdentifier, for: indexPath as IndexPath) as! PantsCollectionViewCell
             cell.image = self.images[indexPath.row]
+            //cell.pantsImage.image = self.pantsImages[indexPath.row].photo
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shoesIdentifier, for: indexPath as IndexPath) as! ShoesCollectionViewCell
             cell.image = self.images[indexPath.row]
+            //cell.shoesImage.image = self.shoesImages[indexPath.row].photo
             return cell
             
         }

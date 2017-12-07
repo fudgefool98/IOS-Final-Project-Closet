@@ -45,40 +45,34 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     
     
     @IBAction func photoButtonWasPressed(_ sender: Any) {
-        #if (!arch(x86_64))
-            //Set orientatrion how the view is
-            //Lots of set up before photo capture can happen
-            let videoPreviewLayerOrientation = previewView?.connection?.videoOrientation
-            sessionQueue.async {
-                let pixelFormatType = NSNumber(value: kCVPixelFormatType_32BGRA)
-                guard self.photoOutput.__availablePhotoPixelFormatTypes.contains(pixelFormatType) else { return}
+
+        let photoSettings = AVCapturePhotoSettings()
+        photoSettings.isHighResolutionPhotoEnabled = true
+        //Breaks at this next line
+        if (self.videoDeviceInput?.device.isFlashAvailable)! {
+            photoSettings.flashMode = .auto
+        } else {
+            print("No device available")
+        }
+        if !photoSettings.availablePreviewPhotoPixelFormatTypes.isEmpty {
+            photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
+        }
+        photoOutput.capturePhoto(with: photoSettings, delegate: self as! AVCapturePhotoCaptureDelegate)
+        
+    }
+    
+    func photoOutput(_ captureOutput: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
+        
+        if let error = error {
+            print("Error capturing photo: \(error)")
+        } else {
+            if let sampleBuffer = photoSampleBuffer, let previewBuffer = previewPhotoSampleBuffer, let dataImage = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: sampleBuffer, previewPhotoSampleBuffer: previewBuffer) {
                 
-                let photoSettings = AVCapturePhotoSettings(format: [kCVPixelBufferPixelFormatTypeKey as String:pixelFormatType])
-                
-                //var photoSettings = AVCapturePhotoSettings(format: <#T##[String : Any]?#>)
-                
-                if let check = self.captureDevice?.isFlashAvailable,
-                    check{
-                    photoSettings.flashMode = .auto
-                }
-                photoSettings.isAutoStillImageStabilizationEnabled = true
-                photoSettings.isHighResolutionPhotoEnabled = true
-                if let photoOutputConnection = self.photoOutput.connection(with: AVMediaType.video) {
-                    photoOutputConnection.videoOrientation = videoPreviewLayerOrientation!
-                }
-                
-                
-                
-                self.photoOutput.capturePhoto(with: photoSettings, delegate: self)
+                photo = UIImage(data: dataImage)
+                performSegue(withIdentifier: "showImage", sender: self)
             }
-            
-            
-            
-            
-            //let videoPreviewLayerOrientation =  //.videoPreviewLayer.connection?.videoOrientation
-            
-            
-        #endif
+        }
+        
     }
     
     //use image picker to select an image
@@ -107,6 +101,8 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -271,6 +267,8 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     //Pass photo forwards
+    
+//Upload photo steps through this but does not segue successfully
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
         print("Check3")

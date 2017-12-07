@@ -16,6 +16,7 @@ class CreateOutfitViewController: UIViewController{
     @IBOutlet weak var shirtCollectionView: UICollectionView!
     @IBOutlet weak var pantsCollectionView: UICollectionView!
     @IBOutlet weak var shoesCollectionView: UICollectionView!
+
     
     
     
@@ -41,7 +42,6 @@ class CreateOutfitViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -204,9 +204,5 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
         let items = result as! [Item]
         return items
     }
-
-    
-    
-
     
 }

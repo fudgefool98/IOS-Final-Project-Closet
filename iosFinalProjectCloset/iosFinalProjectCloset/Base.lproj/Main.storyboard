@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="76" id="qVO-T1-rwP">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="76" id="qVO-T1-rwP">
                                         <rect key="frame" x="0.0" y="28" width="375" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qVO-T1-rwP" id="u18-Yv-FVV">
@@ -33,21 +33,25 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3z-5m-XFp">
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O3z-5m-XFp">
                                                     <rect key="frame" x="119" y="0.0" width="129" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYs-z8-OKL">
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYs-z8-OKL">
                                                     <rect key="frame" x="249" y="0.0" width="126" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="wmG-Yr-tix" kind="show" id="bp4-7J-NDg"/>
+                                            <segue destination="wmG-Yr-tix" kind="show" identifier="showOutfit" id="bp4-7J-NDg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cO1-O1-DBE" id="Z8j-UI-Fjh"/>
+                                    <outlet property="delegate" destination="cO1-O1-DBE" id="EgY-wO-R0S"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,6 +64,9 @@
                         <viewLayoutGuide key="safeArea" id="Uke-Gy-hcv"/>
                     </view>
                     <navigationItem key="navigationItem" id="MkZ-G8-Xcv"/>
+                    <connections>
+                        <outlet property="outfitTable" destination="Q5T-fh-Mz0" id="MTd-KC-8SE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4K-76-HNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -407,7 +414,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bXs-BE-B4C">
-                                <rect key="frame" x="108.5" y="160" width="158" height="29"/>
+                                <rect key="frame" x="108.5" y="116" width="158" height="29"/>
                                 <segments>
                                     <segment title="Shirt"/>
                                     <segment title="Pants"/>
@@ -415,7 +422,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oe9-3V-O6m">
-                                <rect key="frame" x="81.5" y="383" width="212" height="29"/>
+                                <rect key="frame" x="81.5" y="339" width="212" height="29"/>
                                 <segments>
                                     <segment title="Casual"/>
                                     <segment title="Everyday"/>
@@ -423,7 +430,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF4-kv-Y0l">
-                                <rect key="frame" x="163.5" y="496" width="48" height="30"/>
+                                <rect key="frame" x="163.5" y="452" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchItems:" destination="4EM-dN-Pqw" eventType="touchUpInside" id="CzR-wH-mMM"/>
@@ -431,14 +438,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VQ-5s-ZhD">
-                                <rect key="frame" x="168" y="559" width="39" height="30"/>
+                                <rect key="frame" x="168" y="515" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetSegments:" destination="4EM-dN-Pqw" eventType="touchUpInside" id="gKf-aD-Qyp"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z2A-N4-Mx2">
-                                <rect key="frame" x="111.5" y="294" width="152" height="29"/>
+                                <rect key="frame" x="111.5" y="250" width="152" height="29"/>
                                 <segments>
                                     <segment title="Cold"/>
                                     <segment title="All"/>
@@ -568,7 +575,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
-                                    <action selector="photoButtonWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="sLR-J3-K74"/>
+                                    <action selector="photoButtonWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="J23-aP-W5F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-T1-7ov">
@@ -599,7 +606,7 @@
                         <viewLayoutGuide key="safeArea" id="e8v-vj-wGt"/>
                     </view>
                     <connections>
-                        <outlet property="takePhoto" destination="ypM-q0-lA9" id="RLW-vt-zjJ"/>
+                        <outlet property="takePhoto" destination="ypM-q0-lA9" id="SYp-T0-z7U"/>
                         <outlet property="uploadPhoto" destination="NR4-T1-7ov" id="BVr-tk-5o4"/>
                         <segue destination="FLX-df-bzM" kind="show" identifier="showImage" id="X02-yi-KS5"/>
                     </connections>
@@ -708,9 +715,8 @@
         <image name="images-3" width="300" height="168"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DH4-fb-Afl"/>
         <segue reference="QZZ-qW-C4O"/>
         <segue reference="X02-yi-KS5"/>
-        <segue reference="sis-b2-Sou"/>
+        <segue reference="bp4-7J-NDg"/>
     </inferredMetricsTieBreakers>
 </document>

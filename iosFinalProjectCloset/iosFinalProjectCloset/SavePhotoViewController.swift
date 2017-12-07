@@ -72,6 +72,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
                 
                 photo = UIImage(data: dataImage)
                 performSegue(withIdentifier: "showImage", sender: self)
+                print(photo!)
             }
         }
         
@@ -129,6 +130,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         }
         imagePicker.dismiss(animated: true, completion: nil)
         print("Check!")
+        print(photo!)
         performSegue(withIdentifier: "showImage", sender: self)
         print("Check2")
         

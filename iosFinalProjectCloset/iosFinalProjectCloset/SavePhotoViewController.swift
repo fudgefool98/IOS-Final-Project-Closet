@@ -58,6 +58,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         if !photoSettings.availablePreviewPhotoPixelFormatTypes.isEmpty {
             photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
         }
+        snapPhoto()
         photoOutput.capturePhoto(with: photoSettings, delegate: self as! AVCapturePhotoCaptureDelegate)
         
     }
@@ -76,6 +77,25 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         
     }
     
+    func snapPhoto() {
+        
+        //let videoPreviewLayerOrientation = previewView.videoPreviewLayer.connection.videoOrientation
+        self.sessionQueue.async {
+            // Update the photo output's connection to match the video orientation of the video preview layer.
+            if self.photoOutput.connection(with: AVMediaType.video) != nil {
+                //photoOutputConnection.videoOrientation = videoPreviewLayerOrientation
+            
+            
+            let photoSettings = AVCapturePhotoSettings()
+            photoSettings.isAutoStillImageStabilizationEnabled = true
+            photoSettings.isHighResolutionPhotoEnabled = true
+            photoSettings.flashMode = .auto
+            
+            self.photoOutput.capturePhoto(with: photoSettings, delegate: self as! AVCapturePhotoCaptureDelegate)
+        }
+        }
+    }
+    
     func defaultDevice() -> AVCaptureDevice {
         if let device = AVCaptureDevice.default(.builtInDuoCamera,
                                                 for: AVMediaType.video,
@@ -89,6 +109,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
             fatalError("All supported devices are expected to have at least one of the queried capture devices.")
         }
     }
+    
     
     //use image picker to select an image
     let imagePicker = UIImagePickerController()

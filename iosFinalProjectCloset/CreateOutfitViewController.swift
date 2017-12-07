@@ -32,10 +32,10 @@ class CreateOutfitViewController: UIViewController{
     var cellPantsStatus:NSMutableDictionary = NSMutableDictionary();
     var cellShoesStatus:NSMutableDictionary = NSMutableDictionary();
     
-//    var shirtImages = Image.createItems(data: 0)
-//    var pantsImages = Image.createItems(data: 1)
-//    var shoesImages = Image.createItems(data: 2)
-    
+    var shirtImages = Image.createItems(data: 0)
+    var pantsImages = Image.createItems(data: 1)
+    var shoesImages = Image.createItems(data: 2)
+
     var selectedShirtIndexPath: IndexPath?
     var selectedShoesIndexPath: IndexPath?
     var selectedPantsIndexPath: IndexPath?
@@ -90,6 +90,7 @@ class CreateOutfitViewController: UIViewController{
 
     
     @IBAction func showTutorial(_ sender: Any) {
+
     }
     
 

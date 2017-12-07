@@ -128,11 +128,9 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             photo = pickedImage
         }
-        imagePicker.dismiss(animated: true, completion: nil)
-        print("Check!")
-        print(photo!)
-        performSegue(withIdentifier: "showImage", sender: self)
-        print("Check2")
+        imagePicker.dismiss(animated: true) {
+            self.performSegue(withIdentifier: "showImage", sender: self)
+        }
         
     }
     
@@ -309,16 +307,11 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
 //Upload photo steps through this but does not segue successfully
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
-        print("Check3")
         switch identifier {
         case "showImage":
-            print("check4")
             if let navController = segue.destination as? UINavigationController {
-                print ("check5")
                 if let destination = navController.viewControllers.first as? EditItemViewController{
-                    print("check6")
                 if let photo = photo{
-                    print("check7")
                     destination.photo = photo
                 }
                 }

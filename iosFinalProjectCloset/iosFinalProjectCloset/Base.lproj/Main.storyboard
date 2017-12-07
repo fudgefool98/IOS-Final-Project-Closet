@@ -578,32 +578,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypM-q0-lA9">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypM-q0-lA9">
                                 <rect key="frame" x="149" y="318" width="76" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="photoButtonWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="J23-aP-W5F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-T1-7ov">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-T1-7ov">
                                 <rect key="frame" x="140" y="386" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Upload Photo"/>
                                 <connections>
                                     <action selector="ChoosePhotoWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="iLv-9Y-JYr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Create a New Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-Ur-aj0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="To Create a New Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-Ur-aj0">
                                 <rect key="frame" x="103" y="238" width="169" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-qX-KTf">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-qX-KTf">
                                 <rect key="frame" x="168" y="494" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="closePopUp:" destination="SXO-HG-8oa" eventType="touchUpInside" id="CUN-fY-taK"/>
@@ -611,6 +607,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lkc-qX-KTf" firstAttribute="centerX" secondItem="e8v-vj-wGt" secondAttribute="centerX" id="8SH-DV-o7q"/>
+                            <constraint firstItem="ypM-q0-lA9" firstAttribute="centerX" secondItem="e8v-vj-wGt" secondAttribute="centerX" id="YMK-dm-7LA"/>
+                            <constraint firstItem="NR4-T1-7ov" firstAttribute="centerX" secondItem="e8v-vj-wGt" secondAttribute="centerX" id="YTg-um-RZh"/>
+                            <constraint firstItem="Kc4-Ur-aj0" firstAttribute="centerX" secondItem="e8v-vj-wGt" secondAttribute="centerX" id="p1v-xg-qjK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="e8v-vj-wGt"/>
                     </view>
                     <connections>
@@ -723,9 +725,8 @@
         <image name="images-3" width="300" height="168"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DH4-fb-Afl"/>
         <segue reference="Rg7-vQ-Iyt"/>
-        <segue reference="X02-yi-KS5"/>
+        <segue reference="XHa-KM-HJE"/>
         <segue reference="bp4-7J-NDg"/>
     </inferredMetricsTieBreakers>
 </document>

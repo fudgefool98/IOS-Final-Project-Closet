@@ -475,7 +475,15 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="2Oz-ue-Kjn"/>
                         <barButtonItem title="View Closet" id="J1d-kb-i1x"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Search Item" id="qPj-Vy-hvS"/>
+                    <navigationItem key="navigationItem" title="Search Item" id="qPj-Vy-hvS">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="S4W-4x-0bT">
+                            <connections>
+                                <segue destination="25c-Av-Sqf" kind="popoverPresentation" popoverAnchorBarButtonItem="S4W-4x-0bT" id="niH-YQ-hXW">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchClothing" destination="bXs-BE-B4C" id="b2m-hE-HC8"/>
@@ -532,7 +540,7 @@
                     <navigationItem key="navigationItem" id="Olb-LS-BMQ">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="OVM-WT-yXc">
                             <connections>
-                                <segue destination="4EM-dN-Pqw" kind="show" id="QZZ-qW-C4O"/>
+                                <segue destination="c29-wx-85N" kind="show" id="Rg7-vQ-Iyt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -716,7 +724,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DH4-fb-Afl"/>
-        <segue reference="QZZ-qW-C4O"/>
+        <segue reference="Rg7-vQ-Iyt"/>
         <segue reference="X02-yi-KS5"/>
         <segue reference="bp4-7J-NDg"/>
     </inferredMetricsTieBreakers>

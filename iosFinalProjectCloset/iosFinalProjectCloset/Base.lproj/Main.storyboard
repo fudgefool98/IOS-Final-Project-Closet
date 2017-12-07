@@ -414,7 +414,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bXs-BE-B4C">
-                                <rect key="frame" x="108.5" y="116" width="158" height="29"/>
+                                <rect key="frame" x="108.5" y="160" width="158" height="29"/>
                                 <segments>
                                     <segment title="Shirt"/>
                                     <segment title="Pants"/>
@@ -422,7 +422,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oe9-3V-O6m">
-                                <rect key="frame" x="81.5" y="339" width="212" height="29"/>
+                                <rect key="frame" x="81.5" y="383" width="212" height="29"/>
                                 <segments>
                                     <segment title="Casual"/>
                                     <segment title="Everyday"/>
@@ -430,7 +430,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF4-kv-Y0l">
-                                <rect key="frame" x="163.5" y="452" width="48" height="30"/>
+                                <rect key="frame" x="163.5" y="496" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchItems:" destination="4EM-dN-Pqw" eventType="touchUpInside" id="CzR-wH-mMM"/>
@@ -438,14 +438,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VQ-5s-ZhD">
-                                <rect key="frame" x="168" y="515" width="39" height="30"/>
+                                <rect key="frame" x="168" y="559" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetSegments:" destination="4EM-dN-Pqw" eventType="touchUpInside" id="gKf-aD-Qyp"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z2A-N4-Mx2">
-                                <rect key="frame" x="111.5" y="250" width="152" height="29"/>
+                                <rect key="frame" x="111.5" y="294" width="152" height="29"/>
                                 <segments>
                                     <segment title="Cold"/>
                                     <segment title="All"/>
@@ -475,7 +475,15 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="2Oz-ue-Kjn"/>
                         <barButtonItem title="View Closet" id="J1d-kb-i1x"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Search Item" id="qPj-Vy-hvS"/>
+                    <navigationItem key="navigationItem" title="Search Item" id="qPj-Vy-hvS">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="S4W-4x-0bT">
+                            <connections>
+                                <segue destination="25c-Av-Sqf" kind="popoverPresentation" popoverAnchorBarButtonItem="S4W-4x-0bT" id="niH-YQ-hXW">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="searchClothing" destination="bXs-BE-B4C" id="b2m-hE-HC8"/>
@@ -532,7 +540,7 @@
                     <navigationItem key="navigationItem" id="Olb-LS-BMQ">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="OVM-WT-yXc">
                             <connections>
-                                <segue destination="4EM-dN-Pqw" kind="show" id="QZZ-qW-C4O"/>
+                                <segue destination="c29-wx-85N" kind="show" id="Rg7-vQ-Iyt"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -715,7 +723,8 @@
         <image name="images-3" width="300" height="168"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QZZ-qW-C4O"/>
+        <segue reference="DH4-fb-Afl"/>
+        <segue reference="Rg7-vQ-Iyt"/>
         <segue reference="X02-yi-KS5"/>
         <segue reference="bp4-7J-NDg"/>
     </inferredMetricsTieBreakers>

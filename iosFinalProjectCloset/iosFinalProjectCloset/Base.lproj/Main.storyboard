@@ -578,32 +578,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypM-q0-lA9">
-                                <rect key="frame" x="149" y="318" width="76" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypM-q0-lA9">
+                                <rect key="frame" x="140" y="263" width="94" height="30"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="photoButtonWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="J23-aP-W5F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-T1-7ov">
-                                <rect key="frame" x="140" y="386" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-T1-7ov">
+                                <rect key="frame" x="140.5" y="328.5" width="94" height="30"/>
                                 <state key="normal" title="Upload Photo"/>
                                 <connections>
                                     <action selector="ChoosePhotoWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="iLv-9Y-JYr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Create a New Item:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-Ur-aj0">
-                                <rect key="frame" x="103" y="238" width="169" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Create a New Item:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-Ur-aj0">
+                                <rect key="frame" x="16" y="201" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-qX-KTf">
-                                <rect key="frame" x="168" y="494" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-qX-KTf">
+                                <rect key="frame" x="140" y="392" width="94" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="closePopUp:" destination="SXO-HG-8oa" eventType="touchUpInside" id="CUN-fY-taK"/>
@@ -611,6 +607,21 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lkc-qX-KTf" firstAttribute="leading" secondItem="e8v-vj-wGt" secondAttribute="leading" constant="140" id="0r5-gC-mxc"/>
+                            <constraint firstItem="Lkc-qX-KTf" firstAttribute="centerX" secondItem="e8v-vj-wGt" secondAttribute="centerX" id="0wq-Rj-Miw"/>
+                            <constraint firstItem="NR4-T1-7ov" firstAttribute="centerY" secondItem="e8v-vj-wGt" secondAttribute="centerY" id="EFc-fD-Wgx"/>
+                            <constraint firstItem="ypM-q0-lA9" firstAttribute="centerX" secondItem="NR4-T1-7ov" secondAttribute="centerX" id="SDh-5c-Uqr"/>
+                            <constraint firstItem="Kc4-Ur-aj0" firstAttribute="leading" secondItem="e8v-vj-wGt" secondAttribute="leading" constant="16" id="VaB-KY-6om"/>
+                            <constraint firstItem="e8v-vj-wGt" firstAttribute="trailing" secondItem="Lkc-qX-KTf" secondAttribute="trailing" constant="141" id="YkM-uR-pTE"/>
+                            <constraint firstItem="ypM-q0-lA9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NR4-T1-7ov" secondAttribute="leading" id="eh6-u2-31N"/>
+                            <constraint firstItem="ypM-q0-lA9" firstAttribute="top" secondItem="Kc4-Ur-aj0" secondAttribute="bottom" constant="41" id="otq-DA-qFP"/>
+                            <constraint firstItem="Lkc-qX-KTf" firstAttribute="top" secondItem="NR4-T1-7ov" secondAttribute="bottom" constant="33.5" id="r2D-Uo-GHO"/>
+                            <constraint firstItem="NR4-T1-7ov" firstAttribute="centerX" secondItem="e8v-vj-wGt" secondAttribute="centerX" id="rNP-On-Efd"/>
+                            <constraint firstItem="ypM-q0-lA9" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NR4-T1-7ov" secondAttribute="trailing" id="rtM-qf-gor"/>
+                            <constraint firstItem="NR4-T1-7ov" firstAttribute="top" secondItem="ypM-q0-lA9" secondAttribute="bottom" constant="35.5" id="vBn-cK-HC4"/>
+                            <constraint firstItem="e8v-vj-wGt" firstAttribute="trailing" secondItem="Kc4-Ur-aj0" secondAttribute="trailing" constant="16" id="xYK-le-Et9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="e8v-vj-wGt"/>
                     </view>
                     <connections>

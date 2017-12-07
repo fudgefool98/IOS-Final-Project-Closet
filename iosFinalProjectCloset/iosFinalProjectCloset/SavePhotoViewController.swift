@@ -25,6 +25,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     var discoverySession: AVCaptureDevice.DiscoverySession?
     var photo: UIImage?
     var photoSampleBuffer:CMSampleBuffer?
+    //let videoDeviceInput = defaultDevice()
     
     let sessionQueue = DispatchQueue(label: "session queue",
                                      attributes: [],
@@ -45,11 +46,11 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     
     
     @IBAction func photoButtonWasPressed(_ sender: Any) {
-
+        let videoDeviceInput = defaultDevice()
         let photoSettings = AVCapturePhotoSettings()
         photoSettings.isHighResolutionPhotoEnabled = true
         //Breaks at this next line
-        if (self.videoDeviceInput?.device.isFlashAvailable)! {
+        if (videoDeviceInput.isFlashAvailable) {
             photoSettings.flashMode = .auto
         } else {
             print("No device available")
@@ -57,6 +58,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         if !photoSettings.availablePreviewPhotoPixelFormatTypes.isEmpty {
             photoSettings.previewPhotoFormat = [kCVPixelBufferPixelFormatTypeKey as String: photoSettings.availablePreviewPhotoPixelFormatTypes.first!]
         }
+        snapPhoto()
         photoOutput.capturePhoto(with: photoSettings, delegate: self as! AVCapturePhotoCaptureDelegate)
         
     }
@@ -74,6 +76,40 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         }
         
     }
+    
+    func snapPhoto() {
+        
+        //let videoPreviewLayerOrientation = previewView.videoPreviewLayer.connection.videoOrientation
+        self.sessionQueue.async {
+            // Update the photo output's connection to match the video orientation of the video preview layer.
+            if self.photoOutput.connection(with: AVMediaType.video) != nil {
+                //photoOutputConnection.videoOrientation = videoPreviewLayerOrientation
+            
+            
+            let photoSettings = AVCapturePhotoSettings()
+            photoSettings.isAutoStillImageStabilizationEnabled = true
+            photoSettings.isHighResolutionPhotoEnabled = true
+            photoSettings.flashMode = .auto
+            
+            self.photoOutput.capturePhoto(with: photoSettings, delegate: self as! AVCapturePhotoCaptureDelegate)
+        }
+        }
+    }
+    
+    func defaultDevice() -> AVCaptureDevice {
+        if let device = AVCaptureDevice.default(.builtInDuoCamera,
+                                                for: AVMediaType.video,
+                                                      position: .back) {
+            return device // use dual camera on supported devices
+        } else if let device = AVCaptureDevice.default(.builtInWideAngleCamera,
+                                                       for: AVMediaType.video,
+                                                             position: .back) {
+            return device // use default back facing camera otherwise
+        } else {
+            fatalError("All supported devices are expected to have at least one of the queried capture devices.")
+        }
+    }
+    
     
     //use image picker to select an image
     let imagePicker = UIImagePickerController()

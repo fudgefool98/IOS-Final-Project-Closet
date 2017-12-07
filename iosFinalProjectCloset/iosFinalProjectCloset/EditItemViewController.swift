@@ -38,13 +38,13 @@ class EditItemViewController: UIViewController {
         //var photo = itemPhoto?.image
         let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "photo == %@ AND category == %@ AND weatherTag == %@ AND formalTag" , "\(String(describing: itemPhoto))", "\(editClothing)", "\(editWeather)", "\(editFormal)")
+        fetchRequest.predicate = NSPredicate(format: "photo == %@ AND category == %@ AND weatherTag == %@ AND formalTag == %@" , "\(String(describing: itemPhoto))", "\(editClothing)", "\(editWeather)", "\(editFormal)")
         
         let result = try? managedContext?.fetch(fetchRequest)
         let resultData = result as! [Item]
         
         for object in resultData {
-            delete(object)
+            managedContext?.delete(object)
         }
         
         do {

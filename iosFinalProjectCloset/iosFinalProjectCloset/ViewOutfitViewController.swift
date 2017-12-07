@@ -7,12 +7,29 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewOutfitViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // insert fetching:
+        /*
+         let appDelegate = UIApplication.shared.delegate as? AppDelegate
+         let context = appDelegate?.persistentContainer.viewContext
+         let fetchRequest: NSFetchRequest<Outfit> = Outfit.fetchRequest()
+         //outfitFetch.predicate = NSPredicate(format: "name == %@", "namehere")
+         
+         do {
+         categories = try context?.fetch(fetchRequest) ?? []
+         
+         categoriesTableView.reloadData()
+         } catch {
+         print("Could not fetch")
+         }
+        */
+        
         // Do any additional setup after loading the view.
     }
 

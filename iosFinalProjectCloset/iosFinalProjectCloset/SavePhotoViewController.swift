@@ -309,11 +309,9 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         guard let identifier = segue.identifier else { return }
         switch identifier {
         case "showImage":
-            if let navController = segue.destination as? UINavigationController {
-                if let destination = navController.viewControllers.first as? EditItemViewController{
+            if let destination = segue.destination as? EditItemViewController{
                 if let photo = photo{
                     destination.photo = photo
-                }
                 }
             }
         default:

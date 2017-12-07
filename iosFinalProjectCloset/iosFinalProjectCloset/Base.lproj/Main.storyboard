@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="25c-Av-Sqf">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,18 +15,18 @@
             <objects>
                 <viewController id="cO1-O1-DBE" customClass="ViewOutfitViewController" customModule="iosFinalProjectCloset" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6hC-gS-Gi9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q5T-fh-Mz0">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="76" id="qVO-T1-rwP">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="76"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qVO-T1-rwP" id="u18-Yv-FVV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5M-wN-sRF">
@@ -77,11 +77,11 @@
             <objects>
                 <viewController id="wmG-Yr-tix" customClass="CreateOutfitViewController" customModule="iosFinalProjectCloset" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kpH-Ni-yXj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Zr-oF-nZv">
-                                <rect key="frame" x="33" y="173" width="71" height="29"/>
+                                <rect key="frame" x="72" y="173" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -97,7 +97,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="781-q1-Gkm">
-                                <rect key="frame" x="257" y="360" width="71" height="29"/>
+                                <rect key="frame" x="296" y="360" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -105,7 +105,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JW0-2V-2iI">
-                                <rect key="frame" x="33" y="528" width="71" height="29"/>
+                                <rect key="frame" x="72" y="528" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -113,7 +113,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dQ2-2L-FhH">
-                                <rect key="frame" x="257" y="528" width="71" height="29"/>
+                                <rect key="frame" x="296" y="528" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -121,7 +121,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zFd-V8-xKv">
-                                <rect key="frame" x="257" y="173" width="71" height="29"/>
+                                <rect key="frame" x="296" y="173" width="71" height="29"/>
                                 <segments>
                                     <segment title="0"/>
                                     <segment title="1"/>
@@ -272,7 +272,7 @@
                     <navigationItem key="navigationItem" id="aXX-4L-tc0">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="oah-U4-E2O">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AQZ-7q-eg8">
-                                <rect key="frame" x="16" y="7" width="61" height="30"/>
+                                <rect key="frame" x="20" y="7" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="NewItem"/>
                                 <connections>
@@ -285,14 +285,14 @@
                         <rightBarButtonItems>
                             <barButtonItem style="plain" id="uym-hh-kQo">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cJE-Yo-Zbt">
-                                    <rect key="frame" x="329" y="7" width="30" height="30"/>
+                                    <rect key="frame" x="364" y="7" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="?"/>
                                 </button>
                             </barButtonItem>
                             <barButtonItem style="plain" id="fZ6-yW-9EH">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zdM-MU-pqs">
-                                    <rect key="frame" x="249" y="7" width="72" height="30"/>
+                                    <rect key="frame" x="284" y="7" width="72" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="SaveOutfit"/>
                                 </button>
@@ -323,18 +323,18 @@
             <objects>
                 <viewController id="FLX-df-bzM" customClass="EditItemViewController" customModule="iosFinalProjectCloset" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DQM-ny-V4I">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FaZ-fe-LXY">
-                                <rect key="frame" x="97" y="56" width="181" height="91"/>
+                                <rect key="frame" x="116.66666666666669" y="56" width="181" height="91"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="91" id="P01-NW-Iv1"/>
                                     <constraint firstAttribute="width" constant="181" id="UMy-Ia-TBf"/>
                                 </constraints>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Iom-Go-rgd">
-                                <rect key="frame" x="108.5" y="250" width="158" height="29"/>
+                                <rect key="frame" x="128" y="250" width="158" height="29"/>
                                 <segments>
                                     <segment title="Shirt"/>
                                     <segment title="Pants"/>
@@ -342,7 +342,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bKH-pR-mdY">
-                                <rect key="frame" x="111.5" y="348" width="152" height="29"/>
+                                <rect key="frame" x="131" y="348" width="152" height="29"/>
                                 <segments>
                                     <segment title="Cold"/>
                                     <segment title="All"/>
@@ -350,7 +350,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BoZ-W3-7uR">
-                                <rect key="frame" x="81.5" y="466" width="212" height="29"/>
+                                <rect key="frame" x="101" y="466" width="212" height="29"/>
                                 <segments>
                                     <segment title="Casual"/>
                                     <segment title="Everyday"/>
@@ -410,11 +410,11 @@
             <objects>
                 <viewController id="4EM-dN-Pqw" customClass="SearchItemViewController" customModule="iosFinalProjectCloset" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dnT-mt-4sp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bXs-BE-B4C">
-                                <rect key="frame" x="108.5" y="160" width="158" height="29"/>
+                                <rect key="frame" x="128" y="160" width="158" height="29"/>
                                 <segments>
                                     <segment title="Shirt"/>
                                     <segment title="Pants"/>
@@ -422,7 +422,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oe9-3V-O6m">
-                                <rect key="frame" x="81.5" y="383" width="212" height="29"/>
+                                <rect key="frame" x="101" y="383" width="212" height="29"/>
                                 <segments>
                                     <segment title="Casual"/>
                                     <segment title="Everyday"/>
@@ -430,7 +430,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF4-kv-Y0l">
-                                <rect key="frame" x="163.5" y="496" width="48" height="30"/>
+                                <rect key="frame" x="183" y="496" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchItems:" destination="4EM-dN-Pqw" eventType="touchUpInside" id="CzR-wH-mMM"/>
@@ -438,14 +438,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VQ-5s-ZhD">
-                                <rect key="frame" x="168" y="559" width="39" height="30"/>
+                                <rect key="frame" x="187.66666666666666" y="559" width="39" height="30"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
                                     <action selector="resetSegments:" destination="4EM-dN-Pqw" eventType="touchUpInside" id="gKf-aD-Qyp"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z2A-N4-Mx2">
-                                <rect key="frame" x="111.5" y="294" width="152" height="29"/>
+                                <rect key="frame" x="131" y="294" width="152" height="29"/>
                                 <segments>
                                     <segment title="Cold"/>
                                     <segment title="All"/>
@@ -500,7 +500,7 @@
             <objects>
                 <viewController id="OAN-nu-eD1" customClass="ListItemsViewController" customModule="iosFinalProjectCloset" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mWk-Qg-5HY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3bc-Aj-tYU">
@@ -575,31 +575,31 @@
             <objects>
                 <viewController id="SXO-HG-8oa" customClass="SavePhotoViewController" customModule="iosFinalProjectCloset" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QrW-LF-CsO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypM-q0-lA9">
-                                <rect key="frame" x="140" y="263" width="94" height="30"/>
+                                <rect key="frame" x="159.66666666666666" y="297.66666666666669" width="94" height="30"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="photoButtonWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="J23-aP-W5F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-T1-7ov">
-                                <rect key="frame" x="140.5" y="328.5" width="94" height="30"/>
+                                <rect key="frame" x="160" y="363" width="94" height="30"/>
                                 <state key="normal" title="Upload Photo"/>
                                 <connections>
                                     <action selector="ChoosePhotoWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="iLv-9Y-JYr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Create a New Item:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-Ur-aj0">
-                                <rect key="frame" x="16" y="201" width="343" height="21"/>
+                                <rect key="frame" x="16" y="235.66666666666666" width="382" height="20.999999999999972"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-qX-KTf">
-                                <rect key="frame" x="140" y="392" width="94" height="30"/>
+                                <rect key="frame" x="187.66666666666666" y="426.66666666666669" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
                                     <action selector="closePopUp:" destination="SXO-HG-8oa" eventType="touchUpInside" id="CUN-fY-taK"/>
@@ -608,12 +608,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Lkc-qX-KTf" firstAttribute="leading" secondItem="e8v-vj-wGt" secondAttribute="leading" constant="140" id="0r5-gC-mxc"/>
+                            <constraint firstItem="Lkc-qX-KTf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e8v-vj-wGt" secondAttribute="leading" id="0r5-gC-mxc"/>
                             <constraint firstItem="Lkc-qX-KTf" firstAttribute="centerX" secondItem="e8v-vj-wGt" secondAttribute="centerX" id="0wq-Rj-Miw"/>
                             <constraint firstItem="NR4-T1-7ov" firstAttribute="centerY" secondItem="e8v-vj-wGt" secondAttribute="centerY" id="EFc-fD-Wgx"/>
                             <constraint firstItem="ypM-q0-lA9" firstAttribute="centerX" secondItem="NR4-T1-7ov" secondAttribute="centerX" id="SDh-5c-Uqr"/>
                             <constraint firstItem="Kc4-Ur-aj0" firstAttribute="leading" secondItem="e8v-vj-wGt" secondAttribute="leading" constant="16" id="VaB-KY-6om"/>
-                            <constraint firstItem="e8v-vj-wGt" firstAttribute="trailing" secondItem="Lkc-qX-KTf" secondAttribute="trailing" constant="141" id="YkM-uR-pTE"/>
+                            <constraint firstItem="e8v-vj-wGt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lkc-qX-KTf" secondAttribute="trailing" id="YkM-uR-pTE"/>
                             <constraint firstItem="ypM-q0-lA9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NR4-T1-7ov" secondAttribute="leading" id="eh6-u2-31N"/>
                             <constraint firstItem="ypM-q0-lA9" firstAttribute="top" secondItem="Kc4-Ur-aj0" secondAttribute="bottom" constant="41" id="otq-DA-qFP"/>
                             <constraint firstItem="Lkc-qX-KTf" firstAttribute="top" secondItem="NR4-T1-7ov" secondAttribute="bottom" constant="33.5" id="r2D-Uo-GHO"/>
@@ -635,31 +635,13 @@
             <point key="canvasLocation" x="2277.5999999999999" y="392.65367316341832"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="1z4-zn-OVE">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HbU-04-89u" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZFJ-kO-dAR">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="FLX-df-bzM" kind="relationship" relationship="rootViewController" id="70M-at-Szs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="C1U-sy-UrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3194" y="392"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="YHd-mB-PbF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qJc-Pc-yJw" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="6jT-Ma-1qA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="adu-3Q-MEL">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -678,7 +660,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="WU4-lC-g7E"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VWP-F6-q83">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -697,7 +679,7 @@
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="yPx-rG-xjM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7QF-fM-Wdr">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -715,7 +697,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I06-nQ-Mdz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iRB-GQ-7XB">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

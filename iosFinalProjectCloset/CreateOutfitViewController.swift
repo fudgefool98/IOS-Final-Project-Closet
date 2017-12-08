@@ -32,10 +32,6 @@ class CreateOutfitViewController: UIViewController{
     var cellShirtStatus:NSMutableDictionary = NSMutableDictionary();
     var cellPantsStatus:NSMutableDictionary = NSMutableDictionary();
     var cellShoesStatus:NSMutableDictionary = NSMutableDictionary();
-    
-    var shirtImages = Image.createItems(data: 0)
-    var pantsImages = Image.createItems(data: 1)
-    var shoesImages = Image.createItems(data: 2)
 
     var selectedShirtIndexPath: IndexPath?
     var selectedShoesIndexPath: IndexPath?
@@ -52,7 +48,6 @@ class CreateOutfitViewController: UIViewController{
         do {
             if let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
                 items = (try managedContext.fetch(fetchRequest)) ?? []
-                //items = (try managedContext.fetch(fetchRequest)) ?? []
             }
             
         } catch {
@@ -69,42 +64,22 @@ class CreateOutfitViewController: UIViewController{
     
     @IBAction func saveOutfit(_ sender: Any) {
         
-        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext
+  
+            let shirtCell = items.filter({ $0.category == 0 })[(selectedShirtIndexPath?.row)!]
+            let pantsCell = items.filter({ $0.category == 1 })[(selectedPantsIndexPath?.row)!]
+            let shoesCell = items.filter({ $0.category == 2 })[(selectedShoesIndexPath?.row)!]
         
-        if let shirtCollectionView = self.shirtCollectionView,
-        let pantsCollectionView = self.pantsCollectionView,
-        let shoesCollectionView = self.shoesCollectionView {
-            if let shirtIndexPath = shirtCollectionView.indexPathsForSelectedItems?.first,
-            let shoesIndexPath = shoesCollectionView.indexPathsForSelectedItems?.first,
-            let pantsIndexPath = pantsCollectionView.indexPathsForSelectedItems?.first {
-                if let shirtCell = shirtCollectionView.cellForItem(at: shirtIndexPath) as? ShirtCollectionViewCell,
-                let pantsCell = pantsCollectionView.cellForItem(at: pantsIndexPath) as? PantsCollectionViewCell,
-                let shoesCell = shoesCollectionView.cellForItem(at: shoesIndexPath) as? ShoesCollectionViewCell {
-                    if let shirtData = shirtCell.image,
-                    let pantsData = pantsCell.image,
-                    let shoesData = shoesCell.image {
-                        let resultShirt = fetchItem(data: shirtData)
-                        let resultPants = fetchItem(data: pantsData)
-                        let resultShoes = fetchItem(data: shoesData)
-                        
-                        var _ = Outfit(shoes: resultShoes.first, shirt: resultShirt.first, pants: resultPants.first)
-                        
+                        var _ = Outfit(shoes: shoesCell, shirt: shirtCell, pants: pantsCell)
+
                         do {
                             try managedContext.save()
                         } catch let error as NSError {
                             print("Could not save. \(error)")
                         }
-                    }
-                }
-        }
-       
         
-        }
     }
-    
-
     
     @IBAction func showTutorial(_ sender: Any) {
 
@@ -146,8 +121,6 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        
         
         switch collectionView.tag {
         case 0:
@@ -210,16 +183,4 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
         }
     }
 
-    
-    
-    func fetchItem(data: Image) -> [Item] {
-        let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "photo == %@" , "\(String(describing: data))")
-        
-        let result = try? managedContext?.fetch(fetchRequest)
-        let items = result as! [Item]
-        return items
-    }
-    
 }

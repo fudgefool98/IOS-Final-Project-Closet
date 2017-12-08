@@ -295,10 +295,10 @@
                                     <rect key="frame" x="284" y="7" width="72" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="SaveOutfit"/>
+                                    <connections>
+                                        <action selector="saveOutfit:" destination="wmG-Yr-tix" eventType="touchUpInside" id="uZS-bT-7nY"/>
+                                    </connections>
                                 </button>
-                                <connections>
-                                    <action selector="saveOutfit:" destination="wmG-Yr-tix" id="9Ce-4x-SlC"/>
-                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -718,10 +718,9 @@
         <image name="images-3" width="300" height="168"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QOm-fD-wZO"/>
         <segue reference="Rg7-vQ-Iyt"/>
-        <segue reference="Zgg-aw-z7u"/>
+        <segue reference="niH-YQ-hXW"/>
         <segue reference="XHa-KM-HJE"/>
-        <segue reference="ebL-9p-BZd"/>
+        <segue reference="bp4-7J-NDg"/>
     </inferredMetricsTieBreakers>
 </document>

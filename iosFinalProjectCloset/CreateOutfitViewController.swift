@@ -27,7 +27,8 @@ class CreateOutfitViewController: UIViewController{
     @IBOutlet weak var pantsWeatherSegment: UISegmentedControl!
     @IBOutlet weak var shirtWeatherSegment: UISegmentedControl!
     
-    var images = Image.createImages()
+    var images: [Image] = []
+    var items: [Item] = []
     var cellShirtStatus:NSMutableDictionary = NSMutableDictionary();
     var cellPantsStatus:NSMutableDictionary = NSMutableDictionary();
     var cellShoesStatus:NSMutableDictionary = NSMutableDictionary();
@@ -43,6 +44,22 @@ class CreateOutfitViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
+        
+        let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
+        
+        do {
+            if let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                items = (try managedContext.fetch(fetchRequest)) ?? []
+                //items = (try managedContext.fetch(fetchRequest)) ?? []
+            }
+            
+        } catch {
+            print(error)
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -112,15 +129,14 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
-//        switch collectionView.tag {
-//        case 0:
-//            return shirtImages.count
-//        case 1:
-//            return pantsImages.count
-//        default:
-//            return shoesImages.count
-//        }
+        switch collectionView.tag {
+        case 0:
+            return items.filter({ $0.category == 0 }).count
+        case 1:
+            return items.filter({ $0.category == 1 }).count
+        default:
+            return items.filter({ $0.category == 2 }).count
+        }
     }
     
     private struct Storyboard {
@@ -137,19 +153,19 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shirtIdentifier, for: indexPath as IndexPath) as! ShirtCollectionViewCell
             cell.isSelected = (cellShirtStatus[indexPath.row] as? Bool) ?? false
-            cell.image = self.images[indexPath.row]
+            cell.image = Image(image: items.filter({ $0.category == 0 })[indexPath.row].photo)
             //cell.shirtImage.image = self.shirtImages[indexPath.row].photo
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.pantsIdentifier, for: indexPath as IndexPath) as! PantsCollectionViewCell
             cell.isSelected = (cellPantsStatus[indexPath.row] as? Bool) ?? false
-            cell.image = self.images[indexPath.row]
+            cell.image = Image(image: items.filter({ $0.category == 1 })[indexPath.row].photo)
             //cell.pantsImage.image = self.pantsImages[indexPath.row].photo
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shoesIdentifier, for: indexPath as IndexPath) as! ShoesCollectionViewCell
             cell.isSelected = (cellShoesStatus[indexPath.row] as? Bool) ?? false
-            cell.image = self.images[indexPath.row]
+            cell.image = Image(image: items.filter({ $0.category == 2 })[indexPath.row].photo)
             //cell.shoesImage.image = self.shoesImages[indexPath.row].photo
             return cell
             

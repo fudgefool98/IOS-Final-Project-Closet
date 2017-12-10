@@ -6,7 +6,7 @@ Final Project Closet Application
 
 ![UI pt2](https://i.imgur.com/z7Q3Nco.jpg "UI pt2")
 
-USE CASE BELOW:
+Use Case
 
 ![USE CASE](https://i.imgur.com/VFhIBXR.png "USE CASE")
 

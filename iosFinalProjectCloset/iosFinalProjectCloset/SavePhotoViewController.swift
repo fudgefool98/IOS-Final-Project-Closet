@@ -18,6 +18,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBOutlet weak var takePhoto: UIButton!
     @IBOutlet weak var uploadPhoto: UIButton!
+    @IBOutlet weak var closePhoto: UIButton!
     
     let captureSession = AVCaptureSession()
     var captureDevice: AVCaptureDevice?
@@ -91,7 +92,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
             photoSettings.flashMode = .auto
             
             self.photoOutput.capturePhoto(with: photoSettings, delegate: self as! AVCapturePhotoCaptureDelegate)
-        }
+            }
         }
     }
     
@@ -109,6 +110,9 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
     
+    @IBAction func closeCamera(_ sender: Any) {
+        self.captureSession.stopRunning()
+    }
     
     //use image picker to select an image
     let imagePicker = UIImagePickerController()

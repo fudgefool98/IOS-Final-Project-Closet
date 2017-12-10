@@ -569,14 +569,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypM-q0-lA9">
-                                <rect key="frame" x="159.66666666666666" y="297.66666666666669" width="94" height="30"/>
+                                <rect key="frame" x="160" y="297.66666666666669" width="94" height="30"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="photoButtonWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="J23-aP-W5F"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-T1-7ov">
-                                <rect key="frame" x="160" y="363" width="94" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NR4-T1-7ov">
+                                <rect key="frame" x="159" y="340" width="94" height="30"/>
                                 <state key="normal" title="Upload Photo"/>
                                 <connections>
                                     <action selector="ChoosePhotoWasPressed:" destination="SXO-HG-8oa" eventType="touchUpInside" id="iLv-9Y-JYr"/>
@@ -588,10 +588,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-qX-KTf">
-                                <rect key="frame" x="187.66666666666666" y="426.66666666666669" width="39" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lkc-qX-KTf">
+                                <rect key="frame" x="187" y="369" width="39" height="30"/>
                                 <state key="normal" title="Close"/>
                                 <connections>
+                                    <action selector="closeCamera:" destination="SXO-HG-8oa" eventType="touchUpInside" id="iy7-Vt-g9U"/>
                                     <action selector="closePopUp:" destination="SXO-HG-8oa" eventType="touchUpInside" id="CUN-fY-taK"/>
                                 </connections>
                             </button>
@@ -615,6 +616,7 @@
                         <viewLayoutGuide key="safeArea" id="e8v-vj-wGt"/>
                     </view>
                     <connections>
+                        <outlet property="closePhoto" destination="Lkc-qX-KTf" id="5O7-2r-gov"/>
                         <outlet property="takePhoto" destination="ypM-q0-lA9" id="SYp-T0-z7U"/>
                         <outlet property="uploadPhoto" destination="NR4-T1-7ov" id="BVr-tk-5o4"/>
                         <segue destination="FLX-df-bzM" kind="show" identifier="showImage" id="X02-yi-KS5"/>

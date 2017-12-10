@@ -1,6 +1,6 @@
 # iOS-Final-Project-Closet
 Final Project Closet Application
-## UI
+UI
 
 ![UI pt1](https://i.imgur.com/7BjKLna.jpg "UI pt1")
 

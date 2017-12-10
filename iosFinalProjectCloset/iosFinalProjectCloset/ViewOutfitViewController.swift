@@ -8,13 +8,13 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var outfitTable: UITableView!
     var outfits:[Outfit] = []
-//Gives a Core Data outfit initializer error?
-//    var chosenOutfit = Outfit()
+    var images:[UIImage] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,16 +53,7 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        switch cell.imageView?.tag {
-        case 0?:
-            cell.imageView?.image = outfits[indexPath.row].shirt?.photo
-        case 1?:
-            cell.imageView?.image = outfits[indexPath.row].pants?.photo
-        default:
-            cell.imageView?.image = outfits[indexPath.row].shoes?.photo
-        }
-        
-        
+
         return cell
     }
     
@@ -90,8 +81,6 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
 //            break
 //        }
 //    }
-    
-    
     
 
 

@@ -38,13 +38,11 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     }
     
     private var setupResult: SessionSetupResult = .success
-    
-    
+
     var previewView:AVCaptureVideoPreviewLayer?
     
     private let photoOutput = AVCapturePhotoOutput()
-    
-    
+
     @IBAction func photoButtonWasPressed(_ sender: Any) {
         let videoDeviceInput = defaultDevice()
         let photoSettings = AVCapturePhotoSettings()
@@ -120,8 +118,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated: true, completion: nil)
-        
-        
+
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -137,8 +134,6 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -326,10 +321,8 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     
 
     @IBAction func closePopUp(_ sender: Any) {
-        
         self.dismiss(animated: true, completion: nil)
-        
-        
+   
     }
 }
 

@@ -16,6 +16,7 @@ class EditItemViewController: UIViewController {
     @IBOutlet weak var editClothing: UISegmentedControl!
     @IBOutlet weak var editWeather: UISegmentedControl!
     @IBOutlet weak var editFormal: UISegmentedControl!
+    var items: [Item] = []
     
     @IBAction func saveItem(_ sender: Any) {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -36,25 +37,38 @@ class EditItemViewController: UIViewController {
     
     @IBAction func deleteItem(_ sender: Any) {
         //var photo = itemPhoto?.image
-        let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "photo == %@ AND category == %@ AND weatherTag == %@ AND formalTag == %@" , "\(String(describing: itemPhoto))", "\(editClothing)", "\(editWeather)", "\(editFormal)")
         
-        let result = try? managedContext?.fetch(fetchRequest)
-        let resultData = result as! [Item]
-        
-        for object in resultData {
-            managedContext?.delete(object)
-        }
+        let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         
         do {
-            try managedContext?.save()
-            print("saved!")
-        } catch let error as NSError  {
-            print("Could not save \(error)")
-        } catch {
+            if let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                items = (try managedContext.fetch(fetchRequest)) ?? []
+                items = items.filter({$0.category == Int64(editClothing.selectedSegmentIndex)})
+                items = items.filter({$0.formalTag == Int64(editFormal.selectedSegmentIndex)})
+                items = items.filter({$0.weatherTag == Int64(editWeather.selectedSegmentIndex)})
+                items = items.filter({$0.photo == photo})
+                
+                for object in items {
+                    managedContext.delete(object)
+                }
+                
+                do {
+                    try managedContext.save()
+                    print("saved!")
+                } catch let error as NSError  {
+                    print("Could not save \(error)")
+                } catch {
+                    
+                }
+            }
+
             
+        } catch {
+            print(error)
         }
+        
+        
+
     }
     
     

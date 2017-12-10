@@ -17,9 +17,6 @@ class CreateOutfitViewController: UIViewController{
     @IBOutlet weak var pantsCollectionView: UICollectionView!
     @IBOutlet weak var shoesCollectionView: UICollectionView!
 
-    
-    
-    
     @IBOutlet weak var shoesFormalSegment: UISegmentedControl!
     @IBOutlet weak var pantsFormalSegment: UISegmentedControl!
     @IBOutlet weak var shirtFormalSegment: UISegmentedControl!
@@ -54,7 +51,6 @@ class CreateOutfitViewController: UIViewController{
             print(error)
         }
         
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,17 +80,6 @@ class CreateOutfitViewController: UIViewController{
     @IBAction func showTutorial(_ sender: Any) {
 
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -143,7 +128,6 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
             return cell
             
         }
-        
         
     }
     

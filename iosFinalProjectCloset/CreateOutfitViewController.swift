@@ -138,6 +138,7 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
             if let selectedShirtIndexPath = self.selectedShirtIndexPath {
                 let cell = shirtCollectionView.cellForItem(at: selectedShirtIndexPath)
                 cell?.isSelected = true;
+                updateSegmented(indexPath: selectedShirtIndexPath, category: 0)
                 self.cellShirtStatus[indexPath.row] = true;
                 cell?.isSelected = false
                 collectionView.deselectItem(at: selectedShirtIndexPath, animated: true)
@@ -148,6 +149,7 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
             if let selectedPantsIndexPath = self.selectedPantsIndexPath {
                 let cell = pantsCollectionView.cellForItem(at: selectedPantsIndexPath)
                 cell?.isSelected = true;
+                updateSegmented(indexPath: selectedPantsIndexPath, category: 1)
                 self.cellPantsStatus[indexPath.row] = true;
                 cell?.isSelected = false
                 collectionView.deselectItem(at: selectedPantsIndexPath, animated: true)
@@ -158,12 +160,31 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
             if let selectedShoesIndexPath = self.selectedShoesIndexPath {
                 let cell = shoesCollectionView.cellForItem(at: selectedShoesIndexPath)
                 cell?.isSelected = true;
+                updateSegmented(indexPath: selectedShoesIndexPath, category: 2)
                 self.cellShoesStatus[indexPath.row] = true;
                 cell?.isSelected = false
                 collectionView.deselectItem(at: selectedShoesIndexPath, animated: true)
             }
             
             self.selectedShoesIndexPath = indexPath
+        }
+    }
+    
+    func updateSegmented(indexPath: IndexPath, category: Int) {
+        let shirtItems = items.filter({ $0.category == 0 })
+        let pantsItems = items.filter({ $0.category == 1 })
+        let shoesItems = items.filter({ $0.category == 2 })
+        
+        switch category {
+        case 0:
+        shirtFormalSegment.selectedSegmentIndex = Int(shirtItems[indexPath.row].formalTag)
+        shirtWeatherSegment.selectedSegmentIndex = Int(shirtItems[indexPath.row].weatherTag)
+        case 1:
+        pantsFormalSegment.selectedSegmentIndex = Int(pantsItems[indexPath.row].formalTag)
+        pantsWeatherSegment.selectedSegmentIndex = Int(pantsItems[indexPath.row].weatherTag)
+        default:
+        shoesFormalSegment.selectedSegmentIndex = Int(shoesItems[indexPath.row].formalTag)
+        shoesWeatherSegment.selectedSegmentIndex = Int(shoesItems[indexPath.row].weatherTag)
         }
     }
 

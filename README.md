@@ -2,15 +2,15 @@
 Final Project Closet Application
 ## UI
 
-![UI pt1](https://imgur.com/7BjKLna "")
+![UI pt1](https://i.imgur.com/7BjKLna.jpg "UI pt1")
 
-![UI pt2](https://imgur.com/z7Q3Nco "")
+![UI pt2](https://i.imgur.com/z7Q3Nco.jpg "UI pt2")
 
 USE CASE BELOW:
 
-![USE CASE](https://imgur.com/VFhIBXR "")
+![USE CASE](https://i.imgur.com/VFhIBXR.png "USE CASE")
 
 Flow Diagram 
-![Flow Diagram](https://imgur.com/a/GgzwO "")
+![Flow Diagram](https://i.imgur.com/EbLgiO8.png "Flow Diagram")
 Model
-![Model](https://imgur.com/pz5n9By "")
+![Model](https://i.imgur.com/pz5n9By.png "Model")

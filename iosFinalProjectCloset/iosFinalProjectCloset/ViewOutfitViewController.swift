@@ -54,6 +54,14 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
+        images.append((outfits[indexPath.row].shirt?.photo)!)
+        images.append((outfits[indexPath.row].pants?.photo)!)
+        images.append((outfits[indexPath.row].shoes?.photo)!)
+        
+        cell.imageView?.image = stitchImages(images: images, isVertical: false)
+        
+        images = []
+        
         return cell
     }
     
@@ -62,6 +70,39 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
         
        
 
+    }
+    
+    func stitchImages(images: [UIImage], isVertical: Bool) -> UIImage {
+        var stitchedImages : UIImage!
+        if images.count > 0 {
+            var maxWidth = CGFloat(0), maxHeight = CGFloat(0)
+            for image in images {
+                if image.size.width > maxWidth {
+                    maxWidth = image.size.width
+                }
+                if image.size.height > maxHeight {
+                    maxHeight = image.size.height
+                }
+            }
+            var totalSize : CGSize
+            let maxSize = CGSize(width: maxWidth, height: maxHeight)
+            if isVertical {
+                totalSize = CGSize(width: maxSize.width, height: maxSize.height * (CGFloat)(images.count))
+            } else {
+                totalSize = CGSize(width: maxSize.width  * (CGFloat)(images.count), height:  maxSize.height)
+            }
+            UIGraphicsBeginImageContext(totalSize)
+            for image in images {
+                let offset = (CGFloat)(images.index(of: image)!)
+                let rect =  AVMakeRect(aspectRatio: image.size, insideRect: isVertical ?
+                    CGRect(x: 0, y: maxSize.height * offset, width: maxSize.width, height: maxSize.height) :
+                    CGRect(x: maxSize.width * offset, y: 0, width: maxSize.width, height: maxSize.height))
+                image.draw(in: rect)
+            }
+            stitchedImages = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        }
+        return stitchedImages
     }
 
     

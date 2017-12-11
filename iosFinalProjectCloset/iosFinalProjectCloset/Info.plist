@@ -20,16 +20,16 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>To take pictures of clothing. </string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>To add photos to library</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>To select already taken photos and save the photos taken. </string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-    <key>NSCameraUsageDescription</key>
-    <string>To take pictures of clothing. </string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>To select already taken photos and save the photos taken. </string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-    <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>To add photos to library</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -37,8 +37,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

@@ -11,7 +11,7 @@ Video URL:
 ------------------------------------------------------------------------------------------------------------------
 Summary:
 * We used Axosoft for our Scrum Board. 
-* We met Sunday's at 3pm for Sprint Planning / Review.
+* We met Sunday's at 3pm for Sprint Planning / Review / Retrospective.
 * We met after class Tuesday's and Thursday's for our "Daily" Scrum standups.
 
 UI

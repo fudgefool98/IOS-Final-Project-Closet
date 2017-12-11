@@ -5,6 +5,15 @@ Designers: Kori Clay, Marlee Baldridge, Nina Ruhe
 ------------------------------------------------------------------------------------------------------------------
 Developers: Adam Teller, Brian Riddle, Jordan Liebman, Logan Eidson, Mandy Rogers, Tiara Jarrett, Tomer Negrin
 ------------------------------------------------------------------------------------------------------------------
+Axosoft: https://lmek79.axosoft.com/
+------------------------------------------------------------------------------------------------------------------
+Video URL: 
+------------------------------------------------------------------------------------------------------------------
+Summary:
+* We used Axosoft for our Scrum Board. 
+* We met Sunday's at 3pm for Sprint Planning / Review.
+* We met after class Tuesday's and Thursday's for our "Daily" Scrum standups.
+
 UI
 
 ![UI pt1](https://i.imgur.com/7BjKLna.jpg "UI pt1")

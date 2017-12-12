@@ -33,13 +33,16 @@ class CreateOutfitViewController: UIViewController{
     var selectedShirtIndexPath: IndexPath?
     var selectedShoesIndexPath: IndexPath?
     var selectedPantsIndexPath: IndexPath?
+    var viewShirt = false
+    var viewPants = false
+    var viewShoes = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         //let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
-        
+
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         
         do {
@@ -51,8 +54,9 @@ class CreateOutfitViewController: UIViewController{
             print(error)
         }
         
-    }
 
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -113,18 +117,48 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
             cell.isSelected = (cellShirtStatus[indexPath.row] as? Bool) ?? false
             cell.image = Image(image: items.filter({ $0.category == 0 })[indexPath.row].photo)
             //cell.shirtImage.image = self.shirtImages[indexPath.row].photo
+            if viewShirt {
+                let indexToScrollTo = NSIndexPath(row: (selectedShirtIndexPath?.row)!, section: 0)
+                self.shirtCollectionView.scrollToItem(at: indexToScrollTo as IndexPath, at: .left, animated: false)
+                cell.isSelected = true;
+                updateSegmented(indexPath: selectedShirtIndexPath!, category: 0)
+                self.cellShirtStatus[indexPath.row] = true;
+                cell.isSelected = false
+                collectionView.deselectItem(at: selectedShirtIndexPath!, animated: true)
+                viewShirt = false
+            }
             return cell
         case 1:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.pantsIdentifier, for: indexPath as IndexPath) as! PantsCollectionViewCell
             cell.isSelected = (cellPantsStatus[indexPath.row] as? Bool) ?? false
             cell.image = Image(image: items.filter({ $0.category == 1 })[indexPath.row].photo)
             //cell.pantsImage.image = self.pantsImages[indexPath.row].photo
+            if viewPants {
+                let indexToScrollTo = NSIndexPath(row: (selectedPantsIndexPath?.row)!, section: 0)
+                self.pantsCollectionView.scrollToItem(at: indexToScrollTo as IndexPath, at: .left, animated: false)
+                cell.isSelected = true;
+                updateSegmented(indexPath: selectedPantsIndexPath!, category: 1)
+                self.cellPantsStatus[indexPath.row] = true;
+                cell.isSelected = false
+                collectionView.deselectItem(at: selectedPantsIndexPath!, animated: true)
+                viewPants = false
+            }
             return cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shoesIdentifier, for: indexPath as IndexPath) as! ShoesCollectionViewCell
             cell.isSelected = (cellShoesStatus[indexPath.row] as? Bool) ?? false
             cell.image = Image(image: items.filter({ $0.category == 2 })[indexPath.row].photo)
             //cell.shoesImage.image = self.shoesImages[indexPath.row].photo
+            if viewShoes {
+                let indexToScrollTo = NSIndexPath(row: (selectedShoesIndexPath?.row)!, section: 0)
+                self.shoesCollectionView.scrollToItem(at: indexToScrollTo as IndexPath, at: .left, animated: false)
+                cell.isSelected = true;
+                updateSegmented(indexPath: selectedShoesIndexPath!, category: 2)
+                self.cellShoesStatus[indexPath.row] = true;
+                cell.isSelected = false
+                collectionView.deselectItem(at: selectedShoesIndexPath!, animated: true)
+                viewShoes = false
+            }
             return cell
             
         }
@@ -187,5 +221,6 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
         shoesWeatherSegment.selectedSegmentIndex = Int(shoesItems[indexPath.row].weatherTag)
         }
     }
+    
 
 }

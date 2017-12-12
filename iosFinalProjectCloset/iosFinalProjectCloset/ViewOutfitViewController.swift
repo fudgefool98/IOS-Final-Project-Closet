@@ -15,6 +15,11 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var outfitTable: UITableView!
     var outfits:[Outfit] = []
     var images:[UIImage] = []
+    var items:[Item] = []
+    var shirtIndex: IndexPath?
+    var pantsIndex: IndexPath?
+    var shoesIndex: IndexPath?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +35,17 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
         } catch {
             print(error)
             return
+        }
+        
+        let fetchRequestItem: NSFetchRequest<Item> = Item.fetchRequest()
+        
+        do {
+            if let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                items = (try managedContext.fetch(fetchRequestItem)) ?? []
+            }
+            
+        } catch {
+            print(error)
         }
         
         // Do any additional setup after loading the view.
@@ -61,15 +77,8 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.imageView?.image = stitchImages(images: images, isVertical: false)
         
         images = []
-        
+        //cell.imageView?.image = outfits[indexPath.row].shirt?.photo
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //chosenOutfit = outfits[indexPath.row]
-        
-       
-
     }
     
     func stitchImages(images: [UIImage], isVertical: Bool) -> UIImage {
@@ -104,25 +113,61 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         return stitchedImages
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+            if let destination = segue.destination as? CreateOutfitViewController, let selectedRow = outfitTable.indexPathForSelectedRow?.row {
+
+                let chosenOutfit = outfits[selectedRow]
+                
+                let shirtItems = items.filter({ $0.category == 0 })
+                let pantsItems = items.filter({ $0.category == 1 })
+                let shoesItems = items.filter({ $0.category == 2 })
+                
+                var index = 0
+                while index < shirtItems.count {
+                    if (chosenOutfit.shirt == shirtItems[index]) {
+                        shirtIndex = IndexPath(row: index, section: 0)
+                    }
+                    index += 1
+                }
+                
+                index = 0
+                while index < pantsItems.count {
+                    if (chosenOutfit.pants == pantsItems[index]) {
+                        pantsIndex = IndexPath(row: index, section: 0)
+                    }
+                    index += 1
+                }
+                
+                index = 0
+                while index < shoesItems.count {
+                    if (chosenOutfit.shoes == shoesItems[index]) {
+                        shoesIndex = IndexPath(row: index, section: 0)
+                    }
+                    index += 1
+                }
+                
+                if let shirtIndex = shirtIndex,
+                    let pantsIndex = pantsIndex,
+                    let shoesIndex = shoesIndex {
+    
+                        destination.viewShirt = true
+                        destination.viewPants = true
+                        destination.viewShoes = true
+                        destination.selectedShirtIndexPath = shirtIndex
+                        destination.selectedPantsIndexPath = pantsIndex
+                        destination.selectedShoesIndexPath = shoesIndex
+                    
+                     
+                }
+            }
+    
+    }
+    
+
 
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let identifier = segue.identifier else {return }
-//
-//        switch identifier {
-//        case "showOutfit":
-//            if let navController = segue.destination as? UINavigationController, let destination = navController.viewControllers.first as? CreateOutfitViewController {
-//                if let shirt = chosenOutfit.shirt?.photo, let pants = chosenOutfit.pants?.photo, let shoes = chosenOutfit.shoes?.photo {
-//                    destination.shirtCollectionView = shirt
-//                    destination.pantsCollectionView = pants
-//                    destination.shoesCollectionView = shoes
-//                }
-//            }
-//        default:
-//            break
-//        }
-//    }
     
-
 
 }

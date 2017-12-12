@@ -30,7 +30,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="wmG-Yr-tix" kind="show" identifier="showOutfit" id="bp4-7J-NDg"/>
+                                            <segue destination="wmG-Yr-tix" kind="show" id="xfi-hu-Fil"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -709,8 +709,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Rg7-vQ-Iyt"/>
-        <segue reference="Zgg-aw-z7u"/>
+        <segue reference="niH-YQ-hXW"/>
         <segue reference="XHa-KM-HJE"/>
-        <segue reference="bp4-7J-NDg"/>
+        <segue reference="xfi-hu-Fil"/>
     </inferredMetricsTieBreakers>
 </document>

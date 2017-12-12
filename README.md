@@ -1,9 +1,9 @@
 # iOS-Final-Project-Closet
 Final Project Closet Application
 
-Designers: Kori Clay, Marlee Baldridge, Nina Ruhe
+Designers / Product Owners: Kori Clay, Marlee Baldridge, Nina Ruhe
 ------------------------------------------------------------------------------------------------------------------
-Developers: Adam Teller, Brian Riddle, Jordan Liebman, Logan Eidson, Mandy Rogers, Tiara Jarrett, Tomer Negrin
+Developers: Adam Teller, Brian Riddle, Jordan Liebman, Logan Eidson (Scrum Master), Mandy Rogers, Tiara Jarrett, Tomer Negrin
 ------------------------------------------------------------------------------------------------------------------
 Axosoft: https://lmek79.axosoft.com/
 ------------------------------------------------------------------------------------------------------------------
@@ -11,7 +11,7 @@ Video URL:
 ------------------------------------------------------------------------------------------------------------------
 Summary:
 * We used Axosoft for our Scrum Board. 
-* We met Sunday's at 3pm for Sprint Planning / Review / Retrospective.
+* We met Sunday's at 3pm for Sprint Review / Sprint Retrospective / Sprint Planning.
 * We met after class Tuesday's and Thursday's for our "Daily" Scrum standups.
 
 UI

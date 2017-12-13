@@ -357,8 +357,8 @@
                                 <rect key="frame" x="127" y="588" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
                                 <connections>
-                                    <action selector="deleteItem:" destination="FLX-df-bzM" eventType="touchUpInside" id="TCu-8m-OxO"/>
-                                    <segue destination="25c-Av-Sqf" kind="popoverPresentation" popoverAnchorView="FUa-Wz-7DU" id="ewj-Sf-HYs">
+                                    <action selector="deleteItem:" destination="FLX-df-bzM" eventType="touchUpInside" id="DOf-O2-LUL"/>
+                                    <segue destination="25c-Av-Sqf" kind="popoverPresentation" popoverAnchorView="FUa-Wz-7DU" id="koW-kq-7Bv">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -393,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IF7-H7-Pls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3193" y="1196"/>
+            <point key="canvasLocation" x="3510" y="982"/>
         </scene>
         <!--Search Item-->
         <scene sceneID="dlW-PE-e5U">
@@ -524,6 +524,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="listedItems" destination="5Td-AL-OQD" id="Qj5-Kb-CI4"/>
+                        <segue destination="FLX-df-bzM" kind="show" identifier="selectRow" id="IW8-2W-aQ9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSG-13-6t3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -722,7 +723,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Rg7-vQ-Iyt"/>
-        <segue reference="niH-YQ-hXW"/>
+        <segue reference="koW-kq-7Bv"/>
+        <segue reference="IW8-2W-aQ9"/>
         <segue reference="xfi-hu-Fil"/>
     </inferredMetricsTieBreakers>
 </document>

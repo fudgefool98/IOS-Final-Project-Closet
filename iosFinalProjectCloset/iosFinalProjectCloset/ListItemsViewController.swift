@@ -18,6 +18,7 @@ class ListItemsViewController: UIViewController, UITableViewDelegate, UITableVie
     var clothing: Int?
     var weather: Int?
     var formal: Int?
+    var photoItem: Item?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,18 +60,38 @@ class ListItemsViewController: UIViewController, UITableViewDelegate, UITableVie
         return items.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        photoItem = items[indexPath.row]
+        
+        performSegue(withIdentifier: "selectRow", sender: self)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         images.append((items[indexPath.row].photo)!)
+        cell.imageView?.image = images[indexPath.row]
         
         
-        images = []
-        //cell.imageView?.image = outfits[indexPath.row].shirt?.photo
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else { return }
+        switch identifier {
+        case "selectRow":
+            if let destination = segue.destination as? EditItemViewController{
+                if let photoItem = photoItem {
+                    destination.photoItem = photoItem
+                    destination.photo = photoItem.photo
+                }
+            }
+        default:
+            print("DEFAULT")
+            break
+        }
+    }
     
 
     /*

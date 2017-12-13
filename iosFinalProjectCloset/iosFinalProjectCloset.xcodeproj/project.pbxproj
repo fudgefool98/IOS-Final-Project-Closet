@@ -139,6 +139,7 @@
 				9DB809261FD1A03300414219 /* PantsCollectionViewCell.swift */,
 				9D4D05E61FD0F1A40075FBC3 /* ShirtCollectionViewCell.swift */,
 				9D4D05E41FD0E3060075FBC3 /* SavePhotoViewController.swift */,
+				051F2AF21FD4A9C40006F183 /* SearchItemViewController.swift */,
 				9D4D05E01FD0E29E0075FBC3 /* EditItemViewController.swift */,
 				9D4D05DE1FD0E2790075FBC3 /* ListItemsViewController.swift */,
 				9D4D05DC1FD0E1DE0075FBC3 /* ViewOutfitViewController.swift */,
@@ -147,7 +148,6 @@
 				9D73D7661FA66FC7006C8353 /* LaunchScreen.storyboard */,
 				9D73D7691FA66FC7006C8353 /* Info.plist */,
 				9D73D7611FA66FC7006C8353 /* iosFinalProjectCloset.xcdatamodeld */,
-				051F2AF21FD4A9C40006F183 /* SearchItemViewController.swift */,
 			);
 			path = iosFinalProjectCloset;
 			sourceTree = "<group>";

@@ -18,7 +18,8 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     
     @IBOutlet weak var takePhoto: UIButton!
     @IBOutlet weak var uploadPhoto: UIButton!
-    @IBOutlet weak var closePhoto: UIButton!
+    @IBOutlet weak var closePhoto: UIBarButtonItem!
+    
     
     let captureSession = AVCaptureSession()
     var captureDevice: AVCaptureDevice?
@@ -110,6 +111,7 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
         }
     }
     
+
     @IBAction func closeCamera(_ sender: Any) {
         self.captureSession.stopRunning()
     }

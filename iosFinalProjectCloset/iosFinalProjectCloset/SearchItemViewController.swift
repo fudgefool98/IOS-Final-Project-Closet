@@ -10,12 +10,13 @@ import UIKit
 import CoreData
 
 class SearchItemViewController: UIViewController {
-    var items: [Item] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
+    
     @IBOutlet weak var searchClothing: UISegmentedControl!
     @IBOutlet weak var searchWeather: UISegmentedControl!
     @IBOutlet weak var searchFormal: UISegmentedControl!

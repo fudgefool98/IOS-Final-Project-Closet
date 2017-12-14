@@ -24,29 +24,8 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fetchRequest: NSFetchRequest<Outfit> = Outfit.fetchRequest()
-        
-        do {
-            if let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-                outfits = (try managedContext.fetch(fetchRequest)) ?? []
-                //items = (try managedContext.fetch(fetchRequest)) ?? []
-            }
-            
-        } catch {
-            print(error)
-            return
-        }
-        
-        let fetchRequestItem: NSFetchRequest<Item> = Item.fetchRequest()
-        
-        do {
-            if let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-                items = (try managedContext.fetch(fetchRequestItem)) ?? []
-            }
-            
-        } catch {
-            print(error)
-        }
+        outfits = createOutfits()
+        items = createItems()
         
         // Do any additional setup after loading the view.
     }
@@ -77,7 +56,6 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.imageView?.image = stitchImages(images: images, isVertical: false)
         
         images = []
-        //cell.imageView?.image = outfits[indexPath.row].shirt?.photo
         return cell
     }
     
@@ -124,29 +102,10 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
                 let pantsItems = items.filter({ $0.category == 1 })
                 let shoesItems = items.filter({ $0.category == 2 })
                 
-                var index = 0
-                while index < shirtItems.count {
-                    if (chosenOutfit.shirt == shirtItems[index]) {
-                        shirtIndex = IndexPath(row: index, section: 0)
-                    }
-                    index += 1
-                }
-                
-                index = 0
-                while index < pantsItems.count {
-                    if (chosenOutfit.pants == pantsItems[index]) {
-                        pantsIndex = IndexPath(row: index, section: 0)
-                    }
-                    index += 1
-                }
-                
-                index = 0
-                while index < shoesItems.count {
-                    if (chosenOutfit.shoes == shoesItems[index]) {
-                        shoesIndex = IndexPath(row: index, section: 0)
-                    }
-                    index += 1
-                }
+                shirtIndex = checkIndexItem(items: shirtItems, outfit: chosenOutfit, category: 0)
+                pantsIndex = checkIndexItem(items: pantsItems, outfit: chosenOutfit, category: 1)
+                shoesIndex = checkIndexItem(items: shoesItems, outfit: chosenOutfit, category: 2)
+
                 
                 if let shirtIndex = shirtIndex,
                     let pantsIndex = pantsIndex,
@@ -164,10 +123,6 @@ class ViewOutfitViewController: UIViewController, UITableViewDelegate, UITableVi
             }
     
     }
-    
 
-
-    
-    
 
 }

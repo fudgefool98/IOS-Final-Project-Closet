@@ -332,8 +332,3 @@ class SavePhotoViewController: UIViewController, UIImagePickerControllerDelegate
     }
 }
 
-
-
-
-
-

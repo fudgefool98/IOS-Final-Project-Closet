@@ -23,9 +23,6 @@ class ListItemsViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        listedItems.delegate = self as? UITableViewDelegate
-//        listedItems.dataSource = self as? UITableViewDataSource
-        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -38,9 +35,6 @@ class ListItemsViewController: UIViewController, UITableViewDelegate, UITableVie
         } catch _ {
             print("Could not fetch.")
         }
-        
-        
-        
 
         // Do any additional setup after loading the view.
     }
@@ -93,15 +87,5 @@ class ListItemsViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

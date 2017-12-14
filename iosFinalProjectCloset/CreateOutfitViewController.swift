@@ -39,21 +39,8 @@ class CreateOutfitViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        //let fetchRequest: NSFetchRequest<NSFetchRequestResult> = Item.fetchRequest()
 
-        let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
-        
-        do {
-            if let managedContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-                items = (try managedContext.fetch(fetchRequest)) ?? []
-            }
-            
-        } catch {
-            print(error)
-        }
-        
+        items = createItems()
 
     }
     
@@ -79,10 +66,6 @@ class CreateOutfitViewController: UIViewController{
                             print("Could not save. \(error)")
                         }
         
-    }
-    
-    @IBAction func showTutorial(_ sender: Any) {
-
     }
 
 }

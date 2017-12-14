@@ -78,3 +78,77 @@ func checkIndexItem(items: [Item], outfit: Outfit, category: Int) -> IndexPath {
     return indexPath!
 }
 
+func deleteItem(items: [Item], item: Item?, managedContext: NSManagedObjectContext) {
+    var index = 0
+    while index < items.count {
+        if (item == items[index]) {
+            managedContext.delete(items[index])
+            
+            do {
+                try managedContext.save()
+                
+            } catch let error as NSError {
+                print("Could not save \(error)")
+            }
+        }
+        index += 1
+    }
+
+}
+
+func deleteOutfit (outfits: [Outfit], item: Item?, managedContext: NSManagedObjectContext, category: Int) {
+    var index = 0
+    switch category {
+    case 0:
+        while index < outfits.count {
+        print(index)
+        if (item == outfits[index].shirt) {
+        
+        managedContext.delete(outfits[index])
+        
+        do {
+        try managedContext.save()
+        
+        } catch let error as NSError {
+        print("Could not save \(error)")
+        }
+        }
+        index += 1
+        }
+    
+    case 1:
+        while index < outfits.count {
+            print(index)
+            if (item == outfits[index].pants) {
+            
+                managedContext.delete(outfits[index])
+            
+                do {
+                    try managedContext.save()
+                
+                } catch let error as NSError {
+                    print("Could not save \(error)")
+            }
+        }
+        index += 1
+        }
+    default:
+        while index < outfits.count {
+            print(index)
+            if (item == outfits[index].shoes) {
+            
+                managedContext.delete(outfits[index])
+            
+            do {
+                try managedContext.save()
+                
+            } catch let error as NSError {
+                print("Could not save \(error)")
+            }
+        }
+        index += 1
+        }
+}
+}
+
+

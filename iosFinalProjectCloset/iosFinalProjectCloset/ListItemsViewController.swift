@@ -31,7 +31,6 @@ class ListItemsViewController: UIViewController, UITableViewDelegate, UITableVie
         
         do {
             items = try managedContext.fetch(fetchRequest)
-            print("Hello World")
         } catch _ {
             print("Could not fetch.")
         }
@@ -50,7 +49,6 @@ class ListItemsViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(items.count)
         return items.count
     }
     

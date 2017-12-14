@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="25c-Av-Sqf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="25c-Av-Sqf">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,51 +67,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Zr-oF-nZv">
-                                <rect key="frame" x="72" y="217" width="71" height="29"/>
+                                <rect key="frame" x="48" y="217" width="95" height="29"/>
                                 <segments>
-                                    <segment title="0"/>
-                                    <segment title="1"/>
-                                    <segment title="2"/>
+                                    <segment title="" image="snowflake"/>
+                                    <segment title="" image="Allweather1"/>
+                                    <segment title="" image="sun"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kGU-6X-EWI">
-                                <rect key="frame" x="33" y="404" width="71" height="29"/>
+                                <rect key="frame" x="33" y="404" width="95" height="29"/>
                                 <segments>
-                                    <segment title="0"/>
-                                    <segment title="1"/>
-                                    <segment title="2"/>
+                                    <segment title="" image="snowflake"/>
+                                    <segment title="" image="Allweather1"/>
+                                    <segment title="" image="sun"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="781-q1-Gkm">
-                                <rect key="frame" x="296" y="404" width="71" height="29"/>
+                                <rect key="frame" x="272" y="404" width="95" height="29"/>
                                 <segments>
-                                    <segment title="0"/>
-                                    <segment title="1"/>
-                                    <segment title="2"/>
+                                    <segment title="" image="shirt"/>
+                                    <segment title="" image="formal"/>
+                                    <segment title="" image="tie"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JW0-2V-2iI">
-                                <rect key="frame" x="72" y="572" width="71" height="29"/>
+                                <rect key="frame" x="48" y="572" width="95" height="29"/>
                                 <segments>
-                                    <segment title="0"/>
-                                    <segment title="1"/>
-                                    <segment title="2"/>
+                                    <segment title="" image="snowflake"/>
+                                    <segment title="" image="Allweather1"/>
+                                    <segment title="" image="sun"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dQ2-2L-FhH">
-                                <rect key="frame" x="296" y="572" width="71" height="29"/>
+                                <rect key="frame" x="272" y="572" width="95" height="29"/>
                                 <segments>
-                                    <segment title="0"/>
-                                    <segment title="1"/>
-                                    <segment title="2"/>
+                                    <segment title="" image="shirt"/>
+                                    <segment title="" image="formal"/>
+                                    <segment title="" image="tie"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zFd-V8-xKv">
-                                <rect key="frame" x="296" y="217" width="71" height="29"/>
+                                <rect key="frame" x="272" y="217" width="95" height="29"/>
                                 <segments>
-                                    <segment title="0"/>
-                                    <segment title="1"/>
-                                    <segment title="2"/>
+                                    <segment title="" image="shirt"/>
+                                    <segment title="" image="formal"/>
+                                    <segment title="" image="tie"/>
                                 </segments>
                             </segmentedControl>
                             <collectionView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qHP-L6-Bzw">
@@ -278,7 +278,7 @@
                             </barButtonItem>
                             <barButtonItem title="Item" style="plain" id="fZ6-yW-9EH">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zdM-MU-pqs">
-                                    <rect key="frame" x="241" y="7" width="115" height="30"/>
+                                    <rect key="frame" x="223" y="0.0" width="133" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="SaveOutfit" image="heart"/>
                                     <connections>
@@ -717,23 +717,26 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Allweather1" width="17" height="14"/>
         <image name="closet" width="30" height="30"/>
+        <image name="formal" width="17" height="17"/>
         <image name="hanger" width="30" height="30"/>
-        <image name="heart" width="30" height="30"/>
+        <image name="heart" width="48" height="48"/>
         <image name="help" width="30" height="30"/>
         <image name="images-1" width="292" height="172"/>
         <image name="images-12" width="300" height="168"/>
         <image name="images-3" width="300" height="168"/>
         <image name="plus" width="30" height="30"/>
         <image name="scissors" width="30" height="30"/>
+        <image name="shirt" width="17" height="17"/>
+        <image name="snowflake" width="17" height="17"/>
+        <image name="sun" width="17" height="17"/>
+        <image name="tie" width="17" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LAn-sI-fbh"/>
-        <segue reference="Zk5-XT-f4D"/>
-        <segue reference="X02-yi-KS5"/>
-        <segue reference="xfi-hu-Fil"/>
         <segue reference="koW-kq-7Bv"/>
         <segue reference="IW8-2W-aQ9"/>
-        <segue reference="sis-b2-Sou"/>
+        <segue reference="xfi-hu-Fil"/>
     </inferredMetricsTieBreakers>
 </document>

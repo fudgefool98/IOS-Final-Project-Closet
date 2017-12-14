@@ -320,27 +320,27 @@
                                 </constraints>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Iom-Go-rgd">
-                                <rect key="frame" x="128" y="294" width="158" height="29"/>
+                                <rect key="frame" x="159.66666666666666" y="294" width="95" height="29"/>
                                 <segments>
-                                    <segment title=""/>
-                                    <segment title="Pants"/>
-                                    <segment title="Shoes"/>
+                                    <segment title="" image="shirt"/>
+                                    <segment title="" image="pants"/>
+                                    <segment title="" image="shoes"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bKH-pR-mdY">
-                                <rect key="frame" x="131" y="392" width="152" height="29"/>
+                                <rect key="frame" x="159.66666666666666" y="392" width="95" height="29"/>
                                 <segments>
-                                    <segment title="Cold"/>
-                                    <segment title="All"/>
-                                    <segment title="Warm"/>
+                                    <segment title="" image="snowflake"/>
+                                    <segment title="" image="Allweather1"/>
+                                    <segment title="" image="sun"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BoZ-W3-7uR">
-                                <rect key="frame" x="101" y="510" width="212" height="29"/>
+                                <rect key="frame" x="159.66666666666666" y="510" width="95" height="29"/>
                                 <segments>
-                                    <segment title="Casual"/>
-                                    <segment title="Everyday"/>
-                                    <segment title="Formal"/>
+                                    <segment title="" image="formal"/>
+                                    <segment title="" image="shirt"/>
+                                    <segment title="" image="tie"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZc-Zv-P2h">
@@ -404,19 +404,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bXs-BE-B4C">
-                                <rect key="frame" x="128" y="160" width="158" height="29"/>
+                                <rect key="frame" x="159.66666666666666" y="160" width="95" height="29"/>
                                 <segments>
-                                    <segment title="Shirt"/>
-                                    <segment title="Pants"/>
-                                    <segment title="Shoes"/>
+                                    <segment title="" image="shirt"/>
+                                    <segment title="" image="pants"/>
+                                    <segment title="" image="shoes"/>
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oe9-3V-O6m">
-                                <rect key="frame" x="101" y="383" width="212" height="29"/>
+                                <rect key="frame" x="159.66666666666666" y="383" width="95" height="29"/>
                                 <segments>
-                                    <segment title="Casual"/>
-                                    <segment title="Everyday"/>
-                                    <segment title="Formal"/>
+                                    <segment title="" image="formal"/>
+                                    <segment title="" image="shirt"/>
+                                    <segment title="" image="tie"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF4-kv-Y0l">
@@ -434,11 +434,11 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Z2A-N4-Mx2">
-                                <rect key="frame" x="131" y="294" width="152" height="29"/>
+                                <rect key="frame" x="159.66666666666666" y="294" width="95" height="29"/>
                                 <segments>
-                                    <segment title="Cold"/>
-                                    <segment title="All"/>
-                                    <segment title="Warm"/>
+                                    <segment title="" image="snowflake"/>
+                                    <segment title="" image="Allweather1"/>
+                                    <segment title="" image="sun"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>
@@ -726,16 +726,18 @@
         <image name="images-1" width="292" height="172"/>
         <image name="images-12" width="300" height="168"/>
         <image name="images-3" width="300" height="168"/>
+        <image name="pants" width="17" height="17"/>
         <image name="plus" width="30" height="30"/>
         <image name="scissors" width="30" height="30"/>
         <image name="shirt" width="17" height="17"/>
+        <image name="shoes" width="17" height="17"/>
         <image name="snowflake" width="17" height="17"/>
         <image name="sun" width="17" height="17"/>
         <image name="tie" width="17" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LAn-sI-fbh"/>
-        <segue reference="koW-kq-7Bv"/>
+        <segue reference="niH-YQ-hXW"/>
         <segue reference="IW8-2W-aQ9"/>
         <segue reference="xfi-hu-Fil"/>
     </inferredMetricsTieBreakers>

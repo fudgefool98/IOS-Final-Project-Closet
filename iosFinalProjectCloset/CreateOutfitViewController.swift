@@ -99,7 +99,6 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shirtIdentifier, for: indexPath as IndexPath) as! ShirtCollectionViewCell
             cell.isSelected = (cellShirtStatus[indexPath.row] as? Bool) ?? false
             cell.image = Image(image: items.filter({ $0.category == 0 })[indexPath.row].photo)
-            //cell.shirtImage.image = self.shirtImages[indexPath.row].photo
             if viewShirt {
                 let indexToScrollTo = NSIndexPath(row: (selectedShirtIndexPath?.row)!, section: 0)
                 self.shirtCollectionView.scrollToItem(at: indexToScrollTo as IndexPath, at: .left, animated: false)
@@ -115,7 +114,6 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.pantsIdentifier, for: indexPath as IndexPath) as! PantsCollectionViewCell
             cell.isSelected = (cellPantsStatus[indexPath.row] as? Bool) ?? false
             cell.image = Image(image: items.filter({ $0.category == 1 })[indexPath.row].photo)
-            //cell.pantsImage.image = self.pantsImages[indexPath.row].photo
             if viewPants {
                 let indexToScrollTo = NSIndexPath(row: (selectedPantsIndexPath?.row)!, section: 0)
                 self.pantsCollectionView.scrollToItem(at: indexToScrollTo as IndexPath, at: .left, animated: false)
@@ -131,7 +129,6 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Storyboard.shoesIdentifier, for: indexPath as IndexPath) as! ShoesCollectionViewCell
             cell.isSelected = (cellShoesStatus[indexPath.row] as? Bool) ?? false
             cell.image = Image(image: items.filter({ $0.category == 2 })[indexPath.row].photo)
-            //cell.shoesImage.image = self.shoesImages[indexPath.row].photo
             if viewShoes {
                 let indexToScrollTo = NSIndexPath(row: (selectedShoesIndexPath?.row)!, section: 0)
                 self.shoesCollectionView.scrollToItem(at: indexToScrollTo as IndexPath, at: .left, animated: false)

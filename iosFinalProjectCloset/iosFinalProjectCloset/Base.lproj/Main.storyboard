@@ -278,9 +278,9 @@
                             </barButtonItem>
                             <barButtonItem title="Item" style="plain" id="fZ6-yW-9EH">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zdM-MU-pqs">
-                                    <rect key="frame" x="241" y="7" width="115" height="30"/>
+                                    <rect key="frame" x="241" y="5" width="115" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" title="SaveOutfit" image="heart"/>
+                                    <state key="normal" title="SaveOutfit"/>
                                     <connections>
                                         <action selector="saveOutfit:" destination="wmG-Yr-tix" eventType="touchUpInside" id="uZS-bT-7nY"/>
                                     </connections>
@@ -718,8 +718,7 @@
     </scenes>
     <resources>
         <image name="closet" width="30" height="30"/>
-        <image name="hanger" width="50" height="50"/>
-        <image name="heart" width="30" height="30"/>
+        <image name="hanger" width="30" height="30"/>
         <image name="help" width="30" height="30"/>
         <image name="images-1" width="292" height="172"/>
         <image name="images-12" width="300" height="168"/>

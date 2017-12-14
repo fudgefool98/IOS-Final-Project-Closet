@@ -102,7 +102,7 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
             if viewShirt {
                 let indexToScrollTo = NSIndexPath(row: (selectedShirtIndexPath?.row)!, section: 0)
                 self.shirtCollectionView.scrollToItem(at: indexToScrollTo as IndexPath, at: .left, animated: false)
-                cell.isSelected = true;
+                cell.isSelected = true
                 updateSegmented(indexPath: selectedShirtIndexPath!, category: 0)
                 self.cellShirtStatus[indexPath.row] = true;
                 cell.isSelected = false
@@ -117,7 +117,7 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
             if viewPants {
                 let indexToScrollTo = NSIndexPath(row: (selectedPantsIndexPath?.row)!, section: 0)
                 self.pantsCollectionView.scrollToItem(at: indexToScrollTo as IndexPath, at: .left, animated: false)
-                cell.isSelected = true;
+                cell.isSelected = true
                 updateSegmented(indexPath: selectedPantsIndexPath!, category: 1)
                 self.cellPantsStatus[indexPath.row] = true;
                 cell.isSelected = false
@@ -132,9 +132,9 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
             if viewShoes {
                 let indexToScrollTo = NSIndexPath(row: (selectedShoesIndexPath?.row)!, section: 0)
                 self.shoesCollectionView.scrollToItem(at: indexToScrollTo as IndexPath, at: .left, animated: false)
-                cell.isSelected = true;
+                cell.isSelected = true
                 updateSegmented(indexPath: selectedShoesIndexPath!, category: 2)
-                self.cellShoesStatus[indexPath.row] = true;
+                self.cellShoesStatus[indexPath.row] = true
                 cell.isSelected = false
                 collectionView.deselectItem(at: selectedShoesIndexPath!, animated: true)
                 viewShoes = false
@@ -151,36 +151,46 @@ extension CreateOutfitViewController: UICollectionViewDataSource, UICollectionVi
         case 0:
             if let selectedShirtIndexPath = self.selectedShirtIndexPath {
                 let cell = shirtCollectionView.cellForItem(at: selectedShirtIndexPath)
-                cell?.isSelected = true;
-                updateSegmented(indexPath: selectedShirtIndexPath, category: 0)
-                self.cellShirtStatus[indexPath.row] = true;
-                cell?.isSelected = false
-                collectionView.deselectItem(at: selectedShirtIndexPath, animated: true)
+                cell?.isSelected = true
+                self.cellShirtStatus[indexPath.row] = true
+                if (indexPath != selectedShirtIndexPath) {
+                    cell?.isSelected = false
+                    collectionView.deselectItem(at: selectedShirtIndexPath, animated: true)
+                }
             }
             
             self.selectedShirtIndexPath = indexPath
+            updateSegmented(indexPath: self.selectedShirtIndexPath!, category: 0)
+            
         case 1:
             if let selectedPantsIndexPath = self.selectedPantsIndexPath {
                 let cell = pantsCollectionView.cellForItem(at: selectedPantsIndexPath)
-                cell?.isSelected = true;
+                cell?.isSelected = true
                 updateSegmented(indexPath: selectedPantsIndexPath, category: 1)
-                self.cellPantsStatus[indexPath.row] = true;
-                cell?.isSelected = false
-                collectionView.deselectItem(at: selectedPantsIndexPath, animated: true)
+                self.cellPantsStatus[indexPath.row] = true
+                if (indexPath != selectedShirtIndexPath) {
+                    cell?.isSelected = false
+                    collectionView.deselectItem(at: selectedPantsIndexPath, animated: true)
+                }
             }
             
             self.selectedPantsIndexPath = indexPath
+            updateSegmented(indexPath: self.selectedPantsIndexPath!, category: 1)
+            
         default:
             if let selectedShoesIndexPath = self.selectedShoesIndexPath {
                 let cell = shoesCollectionView.cellForItem(at: selectedShoesIndexPath)
                 cell?.isSelected = true;
-                updateSegmented(indexPath: selectedShoesIndexPath, category: 2)
+                
                 self.cellShoesStatus[indexPath.row] = true;
-                cell?.isSelected = false
-                collectionView.deselectItem(at: selectedShoesIndexPath, animated: true)
+                if (indexPath != selectedShirtIndexPath) {
+                    cell?.isSelected = false
+                    collectionView.deselectItem(at: selectedShoesIndexPath, animated: true)
+                }
             }
             
             self.selectedShoesIndexPath = indexPath
+            updateSegmented(indexPath: self.selectedShoesIndexPath!, category: 2)
         }
     }
     

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Outfit View Controller-->
+        <!--View Outfits-->
         <scene sceneID="WbC-Mm-ohx">
             <objects>
                 <viewController id="cO1-O1-DBE" customClass="ViewOutfitViewController" customModule="iosFinalProjectCloset" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uke-Gy-hcv"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MkZ-G8-Xcv"/>
+                    <navigationItem key="navigationItem" title="View Outfits" id="MkZ-G8-Xcv"/>
                     <connections>
                         <outlet property="outfitTable" destination="Q5T-fh-Mz0" id="MTd-KC-8SE"/>
                     </connections>
@@ -58,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="1372" y="1177"/>
         </scene>
-        <!--Create Outfit View Controller-->
+        <!--Closet-->
         <scene sceneID="ecT-og-WsU">
             <objects>
                 <viewController id="wmG-Yr-tix" customClass="CreateOutfitViewController" customModule="iosFinalProjectCloset" customModuleProvider="target" sceneMemberID="viewController">
@@ -75,7 +75,7 @@
                                 </segments>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kGU-6X-EWI">
-                                <rect key="frame" x="33" y="404" width="95" height="29"/>
+                                <rect key="frame" x="48" y="404" width="95" height="29"/>
                                 <segments>
                                     <segment title="" image="snowflake"/>
                                     <segment title="" image="Allweather1"/>
@@ -234,18 +234,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="bWE-UL-Z7d" firstAttribute="trailing" secondItem="kGU-6X-EWI" secondAttribute="trailing" constant="271" id="3YJ-l3-VkW"/>
                             <constraint firstItem="781-q1-Gkm" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="340" id="6Mc-Ev-Tzr"/>
                             <constraint firstItem="zFd-V8-xKv" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="153" id="6Tf-NG-cSX"/>
                             <constraint firstItem="bWE-UL-Z7d" firstAttribute="trailing" secondItem="781-q1-Gkm" secondAttribute="trailing" constant="47" id="9AJ-3F-j3N"/>
                             <constraint firstItem="dQ2-2L-FhH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kpH-Ni-yXj" secondAttribute="leading" constant="20" symbolic="YES" id="Cm7-vH-Lzb"/>
                             <constraint firstItem="bWE-UL-Z7d" firstAttribute="trailing" secondItem="zFd-V8-xKv" secondAttribute="trailing" constant="47" id="DD0-dl-vFL"/>
                             <constraint firstItem="JW0-2V-2iI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bWE-UL-Z7d" secondAttribute="leading" id="Hnn-sw-F69"/>
-                            <constraint firstItem="kGU-6X-EWI" firstAttribute="leading" secondItem="bWE-UL-Z7d" secondAttribute="leading" constant="33" id="KFq-bB-lD7"/>
                             <constraint firstItem="4Zr-oF-nZv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bWE-UL-Z7d" secondAttribute="leading" id="O3P-1i-cQV"/>
                             <constraint firstItem="kGU-6X-EWI" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="340" id="QE3-9G-sas"/>
                             <constraint firstItem="JW0-2V-2iI" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="508" id="SwI-mJ-687"/>
                             <constraint firstItem="bWE-UL-Z7d" firstAttribute="trailing" secondItem="dQ2-2L-FhH" secondAttribute="trailing" constant="47" id="Vp8-iY-IYC"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kGU-6X-EWI" secondAttribute="trailing" constant="20" symbolic="YES" id="Vyb-7u-J9o"/>
                             <constraint firstItem="781-q1-Gkm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kpH-Ni-yXj" secondAttribute="leading" constant="20" symbolic="YES" id="XOv-pD-BTs"/>
                             <constraint firstItem="dQ2-2L-FhH" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="508" id="aWJ-1F-6Mf"/>
                             <constraint firstItem="4Zr-oF-nZv" firstAttribute="top" secondItem="bWE-UL-Z7d" secondAttribute="top" constant="153" id="eht-uu-zFR"/>
@@ -255,7 +254,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bWE-UL-Z7d"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aXX-4L-tc0">
+                    <navigationItem key="navigationItem" title="Closet" id="aXX-4L-tc0">
                         <barButtonItem key="leftBarButtonItem" title="Item" style="plain" id="oah-U4-E2O">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AQZ-7q-eg8">
                                 <rect key="frame" x="20" y="7" width="102" height="30"/>
@@ -304,7 +303,7 @@
             </objects>
             <point key="canvasLocation" x="1372" y="392.65367316341832"/>
         </scene>
-        <!--Edit Item View Controller-->
+        <!--Edit Items-->
         <scene sceneID="li0-lN-mb6">
             <objects>
                 <viewController id="FLX-df-bzM" customClass="EditItemViewController" customModule="iosFinalProjectCloset" customModuleProvider="target" sceneMemberID="viewController">
@@ -343,16 +342,6 @@
                                     <segment title="" image="tie"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZc-Zv-P2h">
-                                <rect key="frame" x="214" y="588" width="34" height="30"/>
-                                <state key="normal" title="Save"/>
-                                <connections>
-                                    <action selector="saveItem:" destination="FLX-df-bzM" eventType="touchUpInside" id="GJX-sf-Krj"/>
-                                    <segue destination="25c-Av-Sqf" kind="popoverPresentation" popoverAnchorView="BZc-Zv-P2h" id="Zgg-aw-z7u">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUa-Wz-7DU">
                                 <rect key="frame" x="127" y="588" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
@@ -363,17 +352,26 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZc-Zv-P2h">
+                                <rect key="frame" x="253" y="588" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveItem:" destination="FLX-df-bzM" eventType="touchUpInside" id="GJX-sf-Krj"/>
+                                    <segue destination="25c-Av-Sqf" kind="popoverPresentation" popoverAnchorView="BZc-Zv-P2h" id="Zgg-aw-z7u">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="QG3-Ak-OqF" firstAttribute="trailing" secondItem="BZc-Zv-P2h" secondAttribute="trailing" constant="127" id="5S9-cc-pGe"/>
                             <constraint firstItem="FUa-Wz-7DU" firstAttribute="leading" secondItem="QG3-Ak-OqF" secondAttribute="leading" constant="127" id="8J8-v9-JKF"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FUa-Wz-7DU" secondAttribute="trailing" constant="20" symbolic="YES" id="8bC-ir-Y7E"/>
                             <constraint firstItem="FaZ-fe-LXY" firstAttribute="centerX" secondItem="DQM-ny-V4I" secondAttribute="centerX" id="Few-xr-8Nx"/>
                             <constraint firstItem="BoZ-W3-7uR" firstAttribute="centerX" secondItem="QG3-Ak-OqF" secondAttribute="centerX" id="KCk-if-ap8"/>
                             <constraint firstItem="FUa-Wz-7DU" firstAttribute="top" secondItem="BoZ-W3-7uR" secondAttribute="bottom" constant="50" id="Kzz-rT-0du"/>
                             <constraint firstItem="BoZ-W3-7uR" firstAttribute="top" secondItem="QG3-Ak-OqF" secondAttribute="top" constant="446" id="S7B-sb-dR8"/>
                             <constraint firstItem="Iom-Go-rgd" firstAttribute="centerX" secondItem="QG3-Ak-OqF" secondAttribute="centerX" id="Wag-h2-JCR"/>
-                            <constraint firstItem="BZc-Zv-P2h" firstAttribute="leading" secondItem="DQM-ny-V4I" secondAttribute="leading" constant="214" id="YkC-E3-Syx"/>
                             <constraint firstItem="BZc-Zv-P2h" firstAttribute="top" secondItem="BoZ-W3-7uR" secondAttribute="bottom" constant="50" id="Yms-8R-6uV"/>
                             <constraint firstItem="FaZ-fe-LXY" firstAttribute="top" secondItem="QG3-Ak-OqF" secondAttribute="top" constant="36" id="dR0-0i-ib8"/>
                             <constraint firstItem="bKH-pR-mdY" firstAttribute="top" secondItem="QG3-Ak-OqF" secondAttribute="top" constant="328" id="jKa-h4-7zf"/>
@@ -383,7 +381,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QG3-Ak-OqF"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4xc-bP-mtL"/>
+                    <navigationItem key="navigationItem" title="Edit Items" id="4xc-bP-mtL"/>
                     <connections>
                         <outlet property="editClothing" destination="Iom-Go-rgd" id="MiK-LN-u33"/>
                         <outlet property="editFormal" destination="BoZ-W3-7uR" id="h2o-f6-ogl"/>
@@ -395,7 +393,7 @@
             </objects>
             <point key="canvasLocation" x="3510" y="982"/>
         </scene>
-        <!--Search Item-->
+        <!--Search Items-->
         <scene sceneID="dlW-PE-e5U">
             <objects>
                 <viewController id="4EM-dN-Pqw" customClass="SearchItemViewController" customModule="iosFinalProjectCloset" customModuleProvider="target" sceneMemberID="viewController">
@@ -464,7 +462,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="2Oz-ue-Kjn"/>
                         <barButtonItem title="View Closet" id="J1d-kb-i1x"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Search Item" id="qPj-Vy-hvS">
+                    <navigationItem key="navigationItem" title="Search Items" id="qPj-Vy-hvS">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="S4W-4x-0bT">
                             <connections>
                                 <segue destination="25c-Av-Sqf" kind="popoverPresentation" popoverAnchorBarButtonItem="S4W-4x-0bT" id="niH-YQ-hXW">
@@ -484,7 +482,7 @@
             </objects>
             <point key="canvasLocation" x="1372" y="1940"/>
         </scene>
-        <!--List Items View Controller-->
+        <!--Select Items-->
         <scene sceneID="8UQ-ex-YJ0">
             <objects>
                 <viewController id="OAN-nu-eD1" customClass="ListItemsViewController" customModule="iosFinalProjectCloset" customModuleProvider="target" sceneMemberID="viewController">
@@ -515,7 +513,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="BXA-ZI-ncH"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Olb-LS-BMQ">
+                    <navigationItem key="navigationItem" title="Select Items" id="Olb-LS-BMQ">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="OVM-WT-yXc">
                             <connections>
                                 <segue destination="c29-wx-85N" kind="show" id="Rg7-vQ-Iyt"/>
@@ -736,7 +734,8 @@
         <image name="tie" width="17" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LAn-sI-fbh"/>
+        <segue reference="DH4-fb-Afl"/>
+        <segue reference="Rg7-vQ-Iyt"/>
         <segue reference="niH-YQ-hXW"/>
         <segue reference="IW8-2W-aQ9"/>
         <segue reference="xfi-hu-Fil"/>

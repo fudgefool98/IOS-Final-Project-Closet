@@ -718,7 +718,7 @@
     </scenes>
     <resources>
         <image name="closet" width="30" height="30"/>
-        <image name="hanger" width="50" height="50"/>
+        <image name="hanger" width="30" height="30"/>
         <image name="heart" width="30" height="30"/>
         <image name="help" width="30" height="30"/>
         <image name="images-1" width="292" height="172"/>
@@ -729,8 +729,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LAn-sI-fbh"/>
-        <segue reference="niH-YQ-hXW"/>
-        <segue reference="IW8-2W-aQ9"/>
-        <segue reference="sis-b2-Sou"/>
+        <segue reference="Zk5-XT-f4D"/>
+        <segue reference="X02-yi-KS5"/>
+        <segue reference="xfi-hu-Fil"/>
     </inferredMetricsTieBreakers>
 </document>
